@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my_swiper": "../../components/swiper/swiper",
+    "loginModal": "../../components/loginModal/loginModal"
+  }
+}

@@ -1,0 +1,101 @@
+.card-content {
+  width: 690rpx;
+  box-shadow: 0rpx 3rpx 8rpx 0rpx rgba(13, 13, 13, 0.07);
+  margin: 0 auto 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0rpx;
+  position:relative;
+}
+.card-text {
+  margin-left: 33rpx;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-store {
+  font-size: 28rpx;
+}
+.card-company{
+  font-size: 20rpx;
+	letter-spacing: 0rpx;
+	color: #3e3e3e;
+  margin-top:10rpx;
+}
+.card-type {
+  margin-top:5rpx;
+   margin-bottom:15rpx;
+}
+.card-type text {
+  padding: 3rpx 11rpx;
+  font-size: 24rpx;
+  color: #09bb07;
+  border-radius: 4rpx;
+  border: solid 1rpx #09bb07;
+}
+.card-between-time {
+  font-size: 20rpx;
+  color: #aeaeae;
+}
+.card-use {
+  height:196rpx;
+  line-height: 196rpx;
+  color: #efeff3;
+  width:242rpx;
+  text-align:center;
+  position:absolute;
+  right:0;
+}
+/* .card-use text:nth-child(1) {
+  font-size: 100rpx;
+} */
+.card-use .noCardUseSub{
+  font-size: 70rpx;
+}
+.card-use .hasCardUseSub{
+  font-size: 80rpx;
+}
+.card-use text:nth-child(2) {
+  font-size: 28rpx;
+  padding-left:10rpx;
+}
+.card-bg-color{
+  height:196rpx;
+}
+/* .card-bg-text{
+  font-size: 113rpx;
+  color: white;
+  border-radius:50%;
+	opacity: 0.08;
+  position:absolute;
+  right:-130rpx;
+  height:170rpx;
+  width:176rpx;
+  padding:0rpx 15rpx;
+  line-height:170rpx;
+  border: 11rpx solid white;
+} */
+.card-right-top-mark{
+  top:0;
+  right:10rpx;
+  position:absolute;
+  text-align:center;
+  width:45rpx;
+  /* width:0rpx;
+  height:0rpx;
+  border-width:0rpx 100rpx 64rpx 0rpx;
+  border-color:transparent #a0a0a0;
+  border-style:solid; */
+}
+.card-right-top-mark text{
+    font-size: 16rpx;
+  line-height:24rpx;
+  letter-spacing: 0rpx;
+  white-space: nowrap;
+  color:#ffffff;
+  transform:rotate(36deg);
+  display:inline-block;
+}
+  

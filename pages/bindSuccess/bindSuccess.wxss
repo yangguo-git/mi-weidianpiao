@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.check {
+  margin: 102rpx 0rpx 54rpx 0rpx;
+}
+.title {
+  font-size: 38rpx;
+  line-height: 70rpx;
+  letter-spacing: 2rpx;
+  color: #000000;
+}
+.sub-title {
+  font-size: 28rpx;
+  line-height: 70rpx;
+  letter-spacing: 2rpx;
+  color: #878787;
+  margin: 47rpx 0rpx 77rpx 0rpx;
+}
+.sure button {
+  width: 529rpx;
+  background-color: #0ba409;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  letter-spacing: 2rpx;
+  color: #ffffff;
+}

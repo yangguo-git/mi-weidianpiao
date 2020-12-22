@@ -1,0 +1,49 @@
+.card {
+  background: white;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+  width: 94%;
+  margin-left: 3%;
+}
+
+.card_b {
+  min-width: 80%;
+  min-height: 200rpx;
+  position: relative;
+  top: 50rpx;
+  background: #efeff3;
+}
+swiper {
+  height: 200rpx;
+  border-radius: 15rpx;
+}
+
+swiper-item {
+  /* position: relative; */
+  border-radius: 15rpx;
+}
+
+swiper-item .img {
+  height: 200rpx;
+  width: 100%;
+  border-radius: 15rpx;
+}
+
+.s_b {
+  position: absolute;
+  bottom: 30rpx;
+  right: 36rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 2px;
+  width: 22rpx;
+  background: white;
+  margin-right: 6rpx;
+}
+
+.active {
+  background: red;
+}

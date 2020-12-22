@@ -1,0 +1,72 @@
+<!--pages/success/index.wxml-->
+<!-- <text>pages/success/index.wxml</text> -->
+
+  <!-- <image class="aaaaaaa" src="https://jayjing.wang/3f63ef6054f52a0408cc5a6a1d0ee65.png"></image> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <image class='img' src='/images/9999.png' mode='widthFix'></image>
+    <view class='main'>
+      <view class='top'>
+        <view class='icon'><icon type="success" color='rgb(50,174,80)' size="100rpx"/></view>
+        <view class='tip1'>已提交</view>
+        <view class='tip2'>请到收银台领取发票</view>
+        <!-- <view class="btnCollection" catchtap="navMiniP">收藏本小店</view> -->
+      </view>
+      <!-- <button wx:if='{{showBackButton && showDiversion === false}}' bindtap='goBack' class='handup-button2' plain type='primary'>立即抽奖</button> -->
+      <!-- <button
+        wx:if='{{showBackButton && showDiversion === true}}'
+        open-type="contact"
+        bindtap='goDiversion'
+        class='handup-button2'
+        plain
+        type='primary'
+        session-from="{{enterType+','+diversionItem.id+','+orderId}}"
+        send-message-title="{{diversionItem.title}}"
+        send-message-img="{{diversionItem.imageUrl}}"
+        show-message-card="{{true}}"
+        send-message-path="/pages/processed/index?enterType={{enterType}}&orderId={{orderId}}"
+      >{{diversionItem.text}}</button> -->
+      <image class="navMiniP" catchtap="navMiniP" mode="widthFix" src="/images/navMiniP.png"></image>
+      <!-- <view wx:if='{{showBackButton && showDiversion === false}}' class='tip3'>恭喜获得极速开票专属抽奖福利</view> -->
+      <copyRight background='transparent' color="#fff" margin="56rpx" padding="180rpx 0 0 0"></copyRight>
+      <view class="attention_code">
+        <text class="attention_code_text" bind:tap="showCode">关注视频号，精彩内容美炸天</text>
+        <!-- <button class="attention_code_button" open-type="contact">关注视频号，精彩内容美炸天</button> -->
+      </view>
+    </view>
+    <!-- <navigator url='/pages/flashIndex/index' hover-class='none' open-type='reLaunch'>
+      <button class='handup-button'>回到首页</button>
+    </navigator> -->
+  
+  </view>
+</view>
+<view class="redpack-cover" wx:if='{{showCover&&showDiversion}}'>
+  <view class="redpack-mian">
+    <button class="closeBtn" bindtap='closeRedPack' plain></button>
+    <image class="close-img" mode='widthFix' src="http://www.weein.cn/img/jskp01.png" bindtap="closeRedPack"></image>
+    <!-- <image class="redpack-img" mode='widthFix' src="http://www.weein.cn/img/jskp02.png"></image> -->
+    <image class="redpack-img" mode='' src="../../images/red.png"></image>
+    <button 
+      class="open-redpack" 
+      bindtap='goDiversion'
+      plain
+     
+      ></button>
+  </view>
+</view>
+<!-- 弹窗二维码 -->
+<view class="picker_box" wx:if="{{isShowCode}}">
+    <view class="mask" bind:tap="maskBox"></view>
+    <view class="content_info">
+    <image src="/images/pond-details.png" class="closeImg" bind:tap="cancelBtn"></image>
+        <view class="picker_confirm">
+            <!-- <view class="picker_title">点击图片保存</view> -->
+            <image class="userImg" src="{{url}}" data-url="{{url}}" bind:tap="handleSave"></image>
+        </view>
+        <view class="picker_btn">
+            <!-- <view class="determine" bind:tap="determine">确定</view> -->
+            <!-- <view class="cancel_btn" bind:tap="cancelBtn">取消</view> -->
+            <view class="cancel_btn">点击图片保存</view>
+        </view>
+    </view>
+</view>

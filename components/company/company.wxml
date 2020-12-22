@@ -1,0 +1,50 @@
+<form bindsubmit='handUp' report-submit='true'>
+<view class='contain'>
+  <view class='flex company-item company-name'>
+    <view class='company-label'>名称<text></text></view>
+    <input bindinput='inputEvent' placeholder-style="color:{{if_name?'red':''}}" name="name" class='input name-input' type='text' value="{{ detail.name}}" placeholder='单位名称(可检索)'></input>
+  </view>
+  <view class='flex company-item'>
+    <view class='company-label'>税号<text></text></view>
+    <input name="taxId" class='input' placeholder-style="color:{{if_taxId?'red':''}}" type='text' value="{{detail.taxId}}" placeholder='15-20位(企业报销时必填)'></input>
+  </view>
+  <view class='flex company-item'>
+    <view class='company-label'>单位地址<text></text></view>
+    <input name="address" class='input' type='text' value="{{ detail.address ? detail.address : ''}}" placeholder='单位地址(专票必填)'></input>
+  </view>
+  <view class='flex company-item'>
+    <view class='company-label'>电话号码<text></text></view>
+    <input name="telephone" class='input' placeholder-style="color:{{if_telephone?'red':''}}" type='text' value="{{ detail.telephone ? detail.telephone : ''}}" placeholder='单位电话(专票必填)'></input>
+  </view>
+  <view class='flex company-item'>
+    <view class='company-label'>开户银行<text></text></view>
+    <input name="bank" class='input' type='text' value="{{ detail.bank ? detail.bank : ''}}" placeholder='开户银行(专票必填)'></input>
+  </view>
+  <view class='flex company-item'>
+    <view class='company-label'>银行账户<text></text></view>
+    <input name="account" class='input' type='text' value="{{ detail.account ? detail.account : ''}}" placeholder='银行账户(专票必填)'></input>
+  </view>
+  <view hidden='{{!show}}'>
+    <view class='flex company-item'>
+      <view class='company-label'>邮箱<text></text></view>
+      <input name="email" class='input' type='text' value="{{ detail.email ? detail.email : ''}}" placeholder='邮箱(选填)'></input>
+    </view>
+    <view class='flex company-item'>
+    <view class='company-label'>手机<text></text></view>
+      <view class='flex between align'>
+        <input name="mobilePhone" class='input phone-input' placeholder-style="color:{{if_mobilePhone?'red':''}}" type='text' value="{{ mobilePhone}}" placeholder='手机(选填)'></input>
+        <button type='primary' class='get-phone-btn' open-type='getPhoneNumber' bindgetphonenumber="getphonenumber" plain>手机号码</button>
+      </view>
+    </view>
+  </view>
+  <view class='font-zoom' hidden='{{show}}' bindtap='showInfo'><text class='iconfont icon-xiangxiajiantou icon-font'></text></view>
+  <view class='font-zoom' hidden='{{!show}}' bindtap='hideInfo'><text class='iconfont icon-xiangshangjiantou icon-font'></text></view>
+  <image mode='widthFix' class='licence' src="/images/100camera.png" bindtap='uploadBizlicense'></image>
+</view>
+<view class='footer'>
+  <button wx:if="{{!appId}}" data-type="save" form-type='submit' class='handup-button'>保存</button>
+  <button wx:if="{{appId}}" data-type="submit" form-type='submit' class='handup-button'>保存</button>
+  <!-- <button wx:if="{{appId}}" data-type="submit" form-type='submit' class='handup-button'>保存并提交</button> -->
+</view>
+</form>
+

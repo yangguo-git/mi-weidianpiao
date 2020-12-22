@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "invoiceitem": "../../components/company/company",
+    "person": "../../components/person/person",
+    "menu": "../../components/menu/index",
+    "copyRight": "../../components/copyRight/index"
+  }
+}

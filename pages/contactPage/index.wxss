@@ -1,0 +1,17 @@
+/* pages/contactPage/index.wxss */
+image{
+  width: 100%;
+}
+page{
+  background: #1935BA;
+}
+.main{
+  position: relative;
+
+}
+.contact-me{
+  position: absolute;
+  left: 50%;
+  bottom: 100rpx;
+  transform: translateX(-50%);
+}

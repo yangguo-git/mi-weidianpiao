@@ -1,0 +1,40 @@
+<!--pages/merchant_home/wifi/wifi.wxml-->
+<view class="t_c">
+  <image class="logo" mode='widthFix' src="https://xyylcdn.weein.cn/winvoice/liantonglogo01.png"></image>
+  <view class="title">{{shopName}}</view>
+</view>
+<block wx:if='{{link_wifi}}'>
+  <view class="t_c link_wifi_block">
+    <image class="wifi3" mode='widthFix' src="/images/wifi2.png"></image>
+    <view class="card_item_txt">已连接WiFi</view>
+    <button class="return_btn" catchtap="return_btn" style="margin-top:80rpx;">返回</button>
+  </view>
+</block>
+<block wx:if='{{!link_wifi}}'>
+  <view class="">
+  <block wx:if='{{wifi_lisk_fw}}'>
+    <view class="t_c">
+      <image class=" wifi3" mode='widthFix' src="/images/wifi3.png"></image>
+    </view>
+    <view class="t_c card_item_txt">您未在WIFI可连接范围</view>
+  </block>
+  <block wx:if='{{!wifi_lisk_fw}}'>
+  <view class="height_200"></view>
+  </block>
+    <view class="card">
+      <view class="tifi_title">WiFi信息</view>
+      <view class="centent">
+        <text>WiFi名称：</text>
+        <input value="{{WiFi_account}}"></input>
+      </view>
+
+      <view class="centent">
+        <text>WiFi密码：</text>
+        <input value="{{WiFi_pass}}"></input>
+        <button catchtap="copy">复制</button>
+      </view>
+    </view>
+    <button class="return_btn" type='primary' catchtap="link" >一键连接WiFi</button>
+    <!-- <button class="return_btn"catchtap="return_btn" >返回</button> -->
+  </view>
+</block>

@@ -1,0 +1,24 @@
+<!--components/copyRight/index.wxml-->
+<!-- <text>components/copyRight/index.wxml</text> -->
+<view class='copy-right' style="background: {{background ? background : '#efeff3'}};padding:{{padding}}">
+  <!-- <image class='companey-log o' src='/images/bottom-logo.png' mode='widthFix'></image> -->
+  <!-- <navigator open-type='navigate' hover-class="none" url='/pages/contactPage/index'>
+    <view class='top'>
+      <image class='companey-logo' src='/images/people.png' mode='widthFix'></image>
+      <view class='companey-phon'>极速开票合伙人计划</view>
+    </view>
+  </navigator> -->
+  <view class='companey-phone-tips'>
+    <navigator open-type='navigate' hover-class="none" url='/pages/contactPage/index'>
+      <view class='top'>
+        <!-- <image class='companey-logo' src='/images/people.png' mode='widthFix'></image> -->
+        <view class='companey-phon'>咨询服务</view>
+      </view>
+    </navigator>
+    <text class='companey-phone' bindtap='makePhoneCall'>拨打客服电话</text>
+  </view>
+  <view class='contact-me'>
+    <!-- <cell styleType="2" isMask="1" bind:completemessage="completemessage" plugid='5d8d7baebf3812e8067254ea4be42261'  /> -->
+  </view>
+</view>
+

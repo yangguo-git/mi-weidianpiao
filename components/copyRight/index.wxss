@@ -1,0 +1,45 @@
+/* components/copyRight/index.wxss text-decoration : none || underline */
+.copy-right{
+  font-size: 24rpx;
+  color: #459ad6;
+  background: #efeff3;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 60rpx;
+}
+.companey-logo{
+  width: 24rpx;
+  display: inline-block;
+  padding-right: 10rpx;
+  height: auto;
+  /* margin: 0 auto; */
+}
+.companey-tips{
+  border-bottom: 1px solid #5caae1;
+  margin-right: 22rpx;
+}
+.companey-phone{
+  /* text-decoration : underline; */
+  margin-left: 22rpx;
+  border-bottom: 1px solid #5caae1;
+}
+.contact-me{
+  width: 300rpx;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.top{
+  color: #5caae1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 260rpx; */
+  border-bottom: 1px solid #5caae1;
+}
+.companey-phone-tips{
+  display: flex;
+  align-items: center;
+  /* width: 750rpx; */
+  justify-content: center;
+  margin-bottom: 62rpx;  
+}

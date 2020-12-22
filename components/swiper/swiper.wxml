@@ -1,0 +1,17 @@
+<!--logs.wxml-->
+<view class="card card_b">
+  <swiper autoplay="{{true}}" interval="4000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" circular="{{true}}">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <view catchtap="click_swiper" id="{{index}}">
+          <image src="{{item}}" class="img"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="s_b">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <view class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>

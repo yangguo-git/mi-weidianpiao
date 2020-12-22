@@ -1,0 +1,27 @@
+<!--components/person/person.wxml-->
+<form bindsubmit='handUp' report-submit='true'>
+  <view class='contain'>
+    <view class='flex person-item'>
+      <view class='person-label'>姓名</view>
+      <input name="name" class='input' type='text' value="{{ detail.name ? detail.name : ''}}" placeholder='姓名(必填)'></input>
+    </view>
+    <view class='flex person-item'>
+      <view class='person-label'>手机</view>
+      <view class='flex between align'>
+      <input name="mobilePhone" class='input phone-input' type='text' value="{{ mobilePhone }}" placeholder='手机(选填)'></input>
+      <button type='primary' class='get-phone-btn' open-type='getPhoneNumber' bindgetphonenumber="getphonenumber" plain>手机号码</button>
+    </view>
+    </view>
+    <view class='flex person-item' hidden='{{!show}}'>
+      <view class='person-label'>邮箱</view>
+      <input name="email" class='input' type='text' value="{{ detail.email ? detail.email : ''}}" placeholder='邮箱(选填)'></input>
+    </view>
+    <view class='font-zoom' hidden='{{show}}' bindtap='showInfo'><text  class='iconfont icon-xiangxiajiantou icon-font'></text></view>
+    <view class='font-zoom' hidden='{{!show}}' bindtap='hideInfo'><text class='iconfont icon-xiangshangjiantou icon-font'></text></view>
+  </view>
+  <view class='footer'>
+    <button wx:if="{{!appId}}" data-type="save" form-type='submit' class='handup-button'>保存</button>
+    <button wx:if="{{appId}}" data-type="submit" form-type='submit' class='handup-button'>保存</button>
+    <!-- <button wx:if="{{appId}}" data-type="submit" form-type='submit' class='handup-button'>保存并提交</button> -->
+  </view>
+</form>

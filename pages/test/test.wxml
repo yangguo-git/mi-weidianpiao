@@ -1,0 +1,11 @@
+<!--pages/relation_from/relation_from.wxml-->
+<!-- <button catchtap="click">点击</button> -->
+
+
+<web-view wx:if='{{show_web}}' src="https://aikaoya.cloudlinks.com.cn/test.html"></web-view>
+
+<button catchtap="click2">点击进入web-view</button>
+
+<button catchtap="click3">点击识别二维码</button>
+
+<image class='img' bindtap="previewImage" src='{{scene}}'></image>

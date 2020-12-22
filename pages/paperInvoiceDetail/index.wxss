@@ -1,0 +1,92 @@
+/* pages/invoiceDtail/index.wxss */
+page{
+  background: #efeff3;
+}
+.top{
+  justify-content: center;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+  margin-bottom: 40rpx;
+}
+.content{
+  /* padding: 60rpx 36rpx 45rpx 50rpx; */
+  font-size: 30rpx;
+  margin-left: 25rpx;
+  background: #fff;
+  width: 700rpx;
+  border-radius: 16rpx;
+  padding-top: 30rpx;
+}
+icon{
+  margin-right: 16rpx;
+}
+.tips{
+   margin-bottom: 50rpx;
+   text-align: center;
+   font-size: 32rpx;
+}
+.name{
+  /* text-align: center;
+  font-size: 36rpx;
+  color: #000000;
+  margin-bottom: 48rpx;
+  text-indent: -50rpx; */
+  width: 300rpx;
+  margin: 0 auto;
+  padding-bottom: 70rpx;
+  padding-top: 50rpx;
+}
+.item{
+  padding-bottom: 26rpx;
+  align-items: center;
+  padding-left: 54rpx;
+  padding-right: 54rpx;
+  justify-content: space-between;
+}
+.title{
+  font-size: 28rpx;
+  color: #aeaeae;
+}
+.money{
+  font-size: 40rpx;
+  color: #ff2828;
+  align-items: baseline;
+}
+.unit{
+  font-size: 30rpx;
+}
+.pro{
+  margin-bottom: 6rpx;
+}
+.footer{
+  /* padding: 60rpx 36rpx 45rpx 50rpx; */
+  font-size: 30rpx;
+  margin-left: 25rpx;
+  background: #fff;
+  width: 700rpx;
+  border-radius: 16rpx;
+  margin-top: 48rpx;
+  margin-bottom: 10rpx;
+}
+.image{
+  width: 38rpx;
+  padding-right: 25rpx;
+  padding-left: 50rpx;
+}
+.main{
+  padding: 30rpx 0; 
+  align-items: center;
+
+}
+.border{
+  border: solid 1px #eaeaea;
+}
+.space{
+  justify-content: space-between;
+}
+.space .flex{
+  align-items: center;
+}
+.more{
+  margin-right: 50rpx;
+}

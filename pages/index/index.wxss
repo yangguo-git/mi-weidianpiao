@@ -1,0 +1,76 @@
+/**index.wxss**/
+page{
+    background: #efeff3;
+}
+.index-logo{
+    width: 170rpx;
+    height: 170rpx;
+    margin: 0 auto;
+    margin-top: 150rpx;
+}
+.logo-img{
+    border-radius: 50%;
+    width: 100%;
+}
+.index-tip{
+    text-align: center;
+    margin-top: 70rpx;
+    color: #999999;
+    font-size: 30rpx;
+    margin-bottom: 50rpx;
+}
+.flex{
+    display: flex;
+}
+.form-main{
+    padding: 0 44rpx;
+    width: 662rpx;
+    font-size: 34rpx;
+    background: #fff;
+}
+.input-item{
+    padding:40rpx 0rpx;
+    align-items: center;
+}
+.input-item2{
+    padding:22rpx 0rpx;
+    align-items: center;
+}
+.input-item.order{
+    border-bottom: 1px solid #eeeeee;
+}
+.input-number{
+    width: 450rpx;
+}
+.input-code{
+    width: 230rpx;
+}
+.code-zoom{
+    width: 190rpx;
+    height: 50rpx;
+    z-index: 999;
+}
+.code-img{
+    width: 100%;
+    display: block;
+    z-index: 999;
+}
+.input-label{
+    padding-right: 56rpx;
+}
+.apply-btn{
+    width: 670rpx;
+    margin-top: 308rpx;
+    font-size: 36rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+}
+.an{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom:180rpx;
+  right: 34rpx;
+}
+
+

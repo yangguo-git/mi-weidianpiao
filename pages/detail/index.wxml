@@ -1,0 +1,85 @@
+<!--pages/detail/index.wxml-->
+<view wx:if='{{mm_bg}}' class="mm_bg">
+  <view class="mm_img_centent">
+  <button class='hard' catchtap="opensetting" style='border:none;padding-top:24rpx;' plain>
+  <image src="/images/101wx.png"></image>
+  </button>
+  <image src="/images/102camera.png" catchtap="uploadBizlicense"></image>
+  <image src="/images/103input.png" catchtap="hide_mm_bg"></image>
+  </view>
+</view>
+<view class='main-layout'>
+  <view bindtap='hideCover' class='layout main-zoom'>
+    <view class='flex title' wx:if="{{appId}}">
+      <!-- <view wx:if="{{!appId}}"></view> -->
+      <!-- <view wx:if="{{appId}}">发送发票抬头给：</view> -->
+      <image wx:if="{{appId && logUrl}}" class='img-logo' src='{{logUrl}}' mode='widthFix'></image>
+      <!-- <view bindtap='deleteEvent'>删除</view> -->
+    </view>
+    <view class='invoice-shopname' wx:if="{{appId}}">{{shopName}}</view>
+    <!-- <menu wx:if="{{appId}}"  type="{{canOpenType}}" bindclick="selectEvent" selectTypeIndex="{{selectTypeIndex}}"></menu> -->
+    <view class='top flex'>
+      <view>发票抬头</view>
+      <button class='hard' wx:if="{{invoiceTitleFlag}}" bindopensetting="opensetting" open-type="openSetting"  style='border:none;padding-top:24rpx;' plain>
+        <view class='weixin flex'>
+          <view class='icon-z'><text class='icon-z-weixin2 iconfont'></text>  </view>
+          <view>微信抬头</view>
+        </view>
+      </button>
+      <button class='hard' bindtap='invoiceTitle' wx:if="{{!invoiceTitleFlag}}" style='border:none;' plain>
+        <view class='weixin flex'>
+          <view class='icon-z'><text class='icon-z-weixin2 iconfont'></text>  </view>
+          <view>微信抬头</view>
+        </view>
+      </button>
+    </view>
+    <view class='main'>
+      <view class='select'>
+        <view class='flex table'>
+          <view class='table-label'>抬头类型</view>
+          <view wx:key="{{index}}" data-index="{{index}}" bindtap='tableEvent' class="table-item  {{'item'+index}} {{(activeIndex == index || editData) ? 'on' : ''}}" wx:for="{{tableList}}">{{item}}</view>
+        </view>
+      </view>
+      <view hidden='{{activeIndex != 0}}' style='position:relative'>
+        <!--bindcompanySave="companySave" detail.type == 1 ? detail : null -->
+        <invoiceitem bindgetphonenumber="getphonenumber" binduploadBizlicense="uploadBizlicense"  bindcompanyName="companyName" detail="{{detail}}" appId="{{isCanSubmit&&appId}}"  bindcompanySubmit="companySubmit" mobilePhone="{{mobilePhone}}"></invoiceitem>
+        <view class='titleItemCover' hidden='{{titleItemCover}}'>
+          <scroll-view scroll-y style="height: 200px;">
+            <view id="titleItem" bindtap='selectIvoiceItem' wx:key="{{item.name}}" data-index='{{index}}' class='input-items' wx:for="{{titleItem}}">{{item.name}}</view>
+          </scroll-view>
+        </view>
+      </view>
+      <view hidden='{{activeIndex != 1}}'>
+        <!-- bindpersonSave="personSave" -->
+        <person bindgetphonenumber="getphonenumber" detail="{{detail.type == 0 ? detail : null}}" appId="{{appId}}" bindpersonSubmit="companySubmit" mobilePhone="{{mobilePhone}}"></person>
+      </view>
+    </view>
+  </view>
+  <copyRight></copyRight>
+  <view class='invoice-title-main' catchtouchmove='return false' wx:if="{{invoiceCover}}">
+    <view class='invoice-title-cover'>
+      <view class='invoice-title-top' wx:if='{{activeIndex == 0}}'>
+        <view class='top-title'>抬头信息</view>
+        <view class='top-tost'>提示：请再次核对企业信息！</view>
+        <view class='title-name'>名称：{{enterInfo.name}}</view>
+        <view class='title-name border-top'>税号：{{enterInfo.taxId}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.address}}">单位地址：{{enterInfo.address}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.telephone}}">电话号码：{{enterInfo.telephone}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.bank}}">开户银行：{{enterInfo.bank}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.account}}">银行账户：{{enterInfo.account}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.email}}">邮箱：{{enterInfo.email}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.mobilePhone}}">手机：{{enterInfo.mobilePhone}}</view>
+      </view>
+      <view class='invoice-title-top' wx:if='{{activeIndex == 1}}'>
+        <view class='top-title' >抬头信息</view>
+        <view class='title-name' wx:if="{{enterInfo.name}}">姓名：{{enterInfo.name}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.mobilePhone}}">手机：{{enterInfo.mobilePhone}}</view>
+        <view class='title-name border-top' wx:if="{{enterInfo.email}}">邮箱：{{enterInfo.email}}</view>
+      </view>
+      <view class='invoice-title-oprate flex between'>
+        <view class='cover-edit' bindtap='hideInvoiceCover'>编辑</view>
+        <view class='cover-comfirm' bindtap='invoiceCoverSubmit'>确定</view>
+      </view>
+    </view>
+  </view>
+</view>

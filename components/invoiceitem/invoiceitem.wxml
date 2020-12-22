@@ -1,0 +1,32 @@
+<!--components/invoiceitem/invoiceitem.wxml-->
+<view class='flex invoice-item' wx:if="{{appId}}">
+  <view class='flex invoice-item-left'>
+    <view hidden='{{!select}}' bindtap='selectEvent'>
+      <text class='iconfont icon-weigouxuan' wx:if="{{!selectStatus}}"></text>
+      <text class='iconfont icon-gouxuan-xuanzhong-yuankuang' wx:if="{{selectStatus}}"></text>
+    </view>
+    <view bindtap='toDetail' class='flex to-detail'>
+      <view>
+        <view>{{invoiceItem.name}}</view>
+        <view class='type' wx:if='{{invoiceItem.type == 0}}'>手机：{{invoiceItem.mobilePhone}}</view>
+        <view class='type' wx:if='{{invoiceItem.type == 1}}'>税号：{{invoiceItem.taxId}}</view>
+      </view>
+      <view ><text class='iconfont icon-youjiantou'></text></view>
+    </view>
+  </view>
+</view>
+
+<view class='flex invoice-item' wx:if="{{!appId}}" bindtap='toDetail'>
+  <view class='flex invoice-item-left'>
+    <!-- <view hidden='{{!select}}' bindtap='selectEvent'>
+      <text class='iconfont icon-weigouxuan' wx:if="{{!selectStatus}}"></text>
+      <text class='iconfont icon-gouxuan-xuanzhong-yuankuang' wx:if="{{selectStatus}}"></text>
+    </view> -->
+    <view>
+      <view>{{invoiceItem.name}}</view>
+      <view class='type' wx:if='{{invoiceItem.type == 0}}'>手机：{{invoiceItem.mobilePhone}}</view>
+      <view class='type' wx:if='{{invoiceItem.type == 1}}'>税号：{{invoiceItem.taxId}}</view>
+    </view>
+  </view>
+  <view><text class='iconfont icon-youjiantou'></text></view>
+</view>

@@ -1,0 +1,17 @@
+<view>
+  <form bindsubmit="searchBox">
+    <view class="search">
+      <view class="search-box">
+        <input placeholder='输入商家姓名，查找优惠券' placeholder-style='font-size: 28rpx;color: #b8b8b8;' name="coupon" bindinput="searchInput"></input>
+      </view>
+      <view class="search-btn">
+        <button form-type='submit'>搜索</button>
+      </view>
+    </view>
+  </form>
+  <view class="card-expired">
+    <block wx:for="{{coupons}}" wx:key="index" data-index="{{index}}" wx:for-item="item">
+      <coupons-card id="{{item.id}}" name="{{item.name}}" companyName="{{item.companyName}}" type="{{item.type}}" vailyTime="{{item.vailyTime}}" value="{{item.value}}" status="{{item.status}}" useTime="{{item.useTime}}" bindtap="goToDesc"></coupons-card>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+/* pages/information/index.wxss */
+page{
+  background: #efeff3;
+}
+.top{
+  color: #000000;
+  font-size: 32rpx;
+  justify-content: center;
+  padding:34rpx 45rpx 0rpx 30rpx;
+  background: #efeff3;
+}
+.main{
+  background: #fff;
+  border-radius: 19rpx;
+  margin: 0rpx 16rpx;
+}
+.information-item{
+  font-size: 32rpx;
+  margin: 0rpx 30rpx;
+  padding: 26rpx 0rpx;
+  align-items: center;
+  /* align-items: baseline; */
+  border-bottom: 1px solid #d2d2d2;
+  color: #999999;
+
+}
+.information-label{
+  width: 144rpx;
+  color: #000;
+  height: 60rpx;
+  /* text-align-last: justify; */
+  padding-right: 36rpx;
+  align-items: center;
+  display: inline-block;
+  text-align: justify;
+  /* vertical-align: middle; */
+  line-height: 60rpx;
+}
+.information-label text {
+   display: inline-block;
+   height: 0;
+   width: 100%  /* 换行 */
+}
+.name{
+  width: 520rpx;
+  color: #000;
+}
+.handup-button2{
+  color: #fff;
+  border: 1px solid #d2d2d2!important;
+  background: #fff;
+}
+.font-zoom{
+  width: 100%;
+  text-align: center;
+  /* border-bottom: 1px solid #d8d8d8; */
+  padding: 24rpx 0;
+}
+.icon-font{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 40rpx;
+  color: #ccc;
+}
+.between{
+justify-content: space-between;
+padding: 47rpx 41rpx 17rpx 42rpx;
+font-size: 28rpx;
+color: #999999;
+}

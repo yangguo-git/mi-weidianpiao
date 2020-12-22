@@ -1,0 +1,66 @@
+<!--pages/information/index.wxml-->
+<!-- <text>pages/information/index.wxml</text> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view class='flex top' wx:if="{{appId}}">
+      <!-- <view wx:if="{{!appId}}"></view> -->
+      <!-- <view wx:if="{{appId}}">发送发票抬头给:</view> -->
+      <!-- <view bindtap='deleteEvent'>删除</view> -->
+      <image wx:if="{{appId && logUrl}}" class='img-logo' src='{{logUrl}}' mode='widthFix'></image>
+    </view>
+    <view class='invoice-shopname' wx:if="{{appId}}">{{shopName}}</view>
+    <!-- <menu wx:if="{{appId && shopName}}"  type="{{canOpenType}}" bindclick="selectEvent" selectTypeIndex="{{selectTypeIndex}}"></menu> -->
+    <view class='flex between'>
+      <view>发票抬头</view>
+      <view bindtap='deleteEvent'>删除</view>
+    </view>
+    <view class='main'>
+      <view class='flex information-item'>
+        <view class='information-label'>名称<text></text></view>
+        <view class='name'>{{detail.name}}</view>
+      </view>
+      <view class='flex information-item' wx:if="{{detail.type == 1}}">
+        <view class='information-label'>税号<text></text></view>
+        <view class='name'>{{detail.taxId}}</view>
+      </view>
+      <view wx:if="{{detail.type == 1}}">
+        <view class='flex information-item'>
+          <view class='information-label'>单位地址<text></text></view>
+          <view class='name'>{{detail.address}}</view>
+        </view>
+        <view class='flex information-item'>
+          <view class='information-label'>电话号码<text></text></view>
+          <view class='name'>{{detail.telephone}}</view>
+        </view>
+        <view class='flex information-item'>
+          <view class='information-label'>开户银行<text></text></view>
+          <view class='name'>{{detail.bank}}</view>
+        </view>
+        <view class='flex information-item'>
+          <view class='information-label'>银行账户<text></text></view>
+          <view class='name'>{{detail.account}}</view>
+        </view>
+      </view>
+      <view hidden='{{!show}}'>
+        <view class='flex information-item'>
+          <view class='information-label'>手机<text></text></view>
+          <view class='name'>{{detail.mobilePhone}}</view>
+        </view>
+        <view class='flex information-item'>
+          <view class='information-label'>邮箱<text></text></view>
+          <view class='name'>{{detail.email}}</view>
+        </view>
+      </view>
+      <view bindtap='showInfo' class='font-zoom' hidden='{{show}}'><text class='iconfont icon-xiangxiajiantou icon-font'></text></view>
+      <view bindtap='showInfo' class='font-zoom' hidden='{{!show}}'><text class='iconfont icon-xiangshangjiantou icon-font'></text></view>
+    </view>
+    <!-- <form report-submit='true' bindsubmit='addInvoice' wx:if="{{appId&&shopName}}">
+      <button form-type='submit' class='handup-button'>提交</button>
+      <button bindtap='toOpenInvoiceDetail' plain class='handup-button handup-button2'>编辑</button>
+    </form>
+    <button wx:if="{{!shopName}}"  bindtap='toDetail' class='handup-button'>编辑</button> -->
+    <button  bindtap='toDetail' class='handup-button'>编辑</button>
+
+  </view>
+  <copyRight></copyRight>
+</view>

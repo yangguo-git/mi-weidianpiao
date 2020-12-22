@@ -1,0 +1,31 @@
+/* pages/payPoint/index.wxss */
+page{
+    background: #efeff3;
+}
+.logo{
+  width: 70rpx;
+  height: auto;
+  padding: 0 50rpx;
+  /* padding-right: 30rpx; */
+}
+.item{
+  width: 690rpx;
+	height: 170rpx;
+	background-color: #ffffff;
+	border-radius: 16rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.title{
+  font-size: 32rpx;
+	color: #424242;
+  padding: 4rpx 0;
+  border-left: 1px solid #e8e8e8;
+  padding-left: 32rpx;
+  width: 365rpx;
+}
+.tips{
+  font-size: 22rpx;
+	color: #adadad;
+}

@@ -1,0 +1,110 @@
+.content{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: ceneter;
+  margin:0 27rpx 31rpx 0rpx;
+}
+.card-check{
+  display:flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  width:107rpx;
+  padding-left:30rpx;
+}
+.card-content {
+  width: 611rpx;
+  height: 161rpx;
+  box-shadow: 0rpx 3rpx 8rpx 0rpx rgba(13, 13, 13, 0.07);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 36rpx;
+  letter-spacing: 0rpx;
+  position:relative;
+}
+.card-text {
+  padding: 32rpx 0rpx 25rpx 31rpx;
+}
+.card-store {
+  font-size: 24rpx;
+}
+.card-type {
+  margin: 11rpx 0rpx 15rpx;
+}
+.card-type text:nth-child(1) {
+  padding: 3rpx 11rpx;
+  font-size: 20rpx;
+  color: #09bb07;
+  border-radius: 4rpx;
+  border: solid 1rpx #09bb07;
+}
+.card-type text:nth-child(2){
+  font-size: 22rpx;
+  color: #09bb07;
+  padding-left:29rpx;
+}
+.card-between-time {
+  font-size: 18rpx;
+  color: #aeaeae;
+}
+.card-use {
+  color: #efeff3;
+  line-height: 34rpx;
+  position:absolute;
+  transform:translateY(-50%);
+  width:215rpx;
+  text-align:center;
+  right:0;
+  top:50%;
+}
+/* .card-use text:nth-child(1) {
+  font-size: 100rpx;
+} */
+.card-use .noCardUseSub{
+  font-size: 56rpx;
+}
+.card-use .hasCardUseSub{
+  font-size: 70rpx;
+}
+.card-use text:nth-child(2) {
+  font-size: 20rpx;
+  padding-left:10rpx;
+}
+/* .card-bg-text{
+  font-size: 113rpx;
+  color: white;
+  border-radius:50%;
+	opacity: 0.08;
+  position:absolute;
+  right:-130rpx;
+  height:170rpx;
+  width:176rpx;
+  padding:0rpx 15rpx;
+  line-height:170rpx;
+  border: 11rpx solid white;
+} */
+.card-right-top-mark{
+  top:0;
+  right:5rpx;
+  position:absolute;
+  text-align:center;
+  width:45rpx;
+  /* width:0rpx;
+  height:0rpx;
+  border-width:0rpx 100rpx 64rpx 0rpx;
+  border-color:transparent #a0a0a0;
+  border-style:solid; */
+}
+.card-right-top-mark text{
+    font-size: 16rpx;
+  line-height:24rpx;
+  letter-spacing: 0rpx;
+  white-space: nowrap;
+  color:#ffffff;
+  transform:rotate(36deg);
+  display:inline-block;
+}
+  

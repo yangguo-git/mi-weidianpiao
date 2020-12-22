@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "已使用优惠券",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "coupons-card": "../../components/couponsCard/couponsCard"
+  }
+}

@@ -1,0 +1,16 @@
+/* pages/success/index.wxss */
+page{
+  background: #efeff3;
+  
+}
+.top{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  background: #fff;
+  padding-bottom: 46rpx;
+}
+.icon{
+  padding-top: 58rpx;
+}

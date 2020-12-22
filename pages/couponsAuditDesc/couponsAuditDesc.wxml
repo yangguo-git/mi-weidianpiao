@@ -1,0 +1,61 @@
+<view>
+  <view class="content">
+    <view class="card-content">
+      <view class="card-content-top">
+        <view class="card-text">
+          <view class="card-store">{{ coupons.title }}
+          </view>
+          <view class="card-type">
+            <text wx:if="{{coupons.cardType==='DISCOUNT'}}">折扣券</text>
+            <text wx:if="{{coupons.cardType==='DONATE'}}">赠送券</text>
+            <text wx:if="{{coupons.cardType==='CASH'}}">现金券</text>
+          </view>
+          <view class="card-between-time">
+            <text>{{coupons.vailyTime}}</text>
+          </view>
+        </view>
+        <view class="card-use" wx:if="{{coupons.cardType==='DISCOUNT'}}">
+          <text class="hasCardUseSub">{{ coupons.cardValue }}</text>
+          <text>折</text>
+        </view>
+        <view class="card-use" wx:if="{{coupons.cardType==='CASH'}}">
+          <text class="hasCardUseSub">{{ coupons.cardValue }}</text>
+          <text>元</text>
+        </view>
+        <view class="card-use" wx:if="{{coupons.cardType==='DONATE'}}">
+          <text class="noCardUseSub">{{ coupons.cardValue }}</text>
+        </view>
+        <view class="card-bg-text">
+          <text>券</text>
+        </view>
+      </view>
+    </view>
+    <view class="card-desc">
+      <view class="card-desc-time">
+        <view>有效期</view>
+        <view class="card-desc-text">
+           <text>{{coupons.vailyTime}}</text>
+        </view>
+      </view>
+      <view class="card-desc-use">
+        <view>使用须知</view>
+        <block wx:for="{{coupons.description}}" wx:for-item="item" wx:key="index" data-index="{{index}}">
+          <view class="card-desc-text">
+            <view style="width:10rpx;height:10rpx;background-color: #535353;border-radius:50%;display:inline-block;margin-right:17rpx;">
+            </view>{{item}}
+          </view>
+        </block>
+      </view>
+      <view class="card-desc-notice">
+        <view>注意事项</view>
+        <block wx:for="{{cardNotice}}" wx:for-item="item" wx:key="index" data-index="{{index}}">
+          <view class="card-desc-text">
+            <view style="width:10rpx;height:10rpx;background-color: #535353;border-radius:50%;margin-right:17rpx;">
+            </view>
+            {{item}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

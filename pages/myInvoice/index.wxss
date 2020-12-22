@@ -1,0 +1,217 @@
+/* pages/success/index.wxss */
+page{
+  background: #efeff3;
+  padding-bottom: 20rpx;
+}
+.top-main{
+ background: #eee;
+ opacity: 1;
+ position: fixed;
+ top: 0;
+ left: 0;
+}
+.table{
+  justify-content: space-around;
+  background: #fff;
+
+  padding: 0 24rpx;
+  margin-top: 24rpx;
+  width: 670rpx;
+  background-color: #ffffff;
+	border-radius: 19rpx;
+  margin-left: 16rpx;
+}
+.table .item{
+  align-items: center;
+  align-content: center;
+  font-size: 32rpx;
+  color: #333;
+  padding: 40rpx 0 32rpx 0;
+
+}
+.item .icon-xiala{
+  font-size: 14rpx;
+  color: #999999;
+  padding-top: 6rpx;
+  margin-left: 10rpx;
+}
+.content{
+  padding-top: 140rpx;
+  margin: 0 16rpx;
+}
+.main{
+  
+}
+.main .flex{
+  justify-content: space-between;
+}
+.conpaney{
+  	font-size: 40rpx;
+    height: 52rpx;
+    margin-top: 40rpx;
+    color: #333333;
+    margin-bottom: 16rpx;
+}
+.money{
+  font-size: 24rpx;
+  color: #777777;
+}
+.box{
+  justify-content: space-between;
+  padding: 30rpx 50rpx 4rpx 50rpx;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 650rpx;
+  position: fixed;
+  top:-250rpx;
+  left: 0;
+  background: #fff;
+  z-index: 22;
+}
+.box.on{
+  top:0;
+  animation:mymove 0.3s 1;
+	-webkit-animation:mymove 0.3s 1;
+  
+}
+.box:after {
+    content: "";
+    width: 200rpx;
+ }
+.box .item{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  border: solid 1px #07af12;
+  color: #333333;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 28rpx!important;
+ }
+ @keyframes mymove
+{
+	from {top:-250rpx;}
+	to {top:0rpx;}
+}
+.cover{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+.footer{
+  justify-content: space-between;
+}
+.img{
+  width: 32rpx;
+  margin-left: 6rpx;
+  height: auto;
+}
+.box2{
+  justify-content: space-between;
+  padding: 30rpx 0rpx 4rpx 0rpx;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 750rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 22;
+  font-size: 32rpx;
+  
+}
+.invoice-type{
+  justify-content: space-between;
+  padding: 30rpx 50rpx;
+}
+.border{
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.movable-item {
+  position: relative;
+  width: 674rpx;
+  box-sizing: border-box;
+  z-index: 100!important;
+  padding: 26rpx 0rpx 20rpx 0rpx;
+  margin-bottom: 20rpx;
+}
+
+.movable-item movable-area {
+  height: 180rpx;
+  /* width: 696rpx; */
+  width: 580rpx;
+}
+
+.movable-item movable-view {
+  /* height: 180rpx; */
+  height: auto;
+  width: 674rpx;
+  padding: 28rpx 22rpx 20rpx 22rpx;
+  background: #fff;
+  z-index: 100;
+  font-size: 26rpx;
+  color: #555555;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+
+.movable-item-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+  line-height: 120rpx;
+}
+.icon-piaojuleixingtubiao{
+  /* color: #F15555; */
+  color: #f00;
+  font-size: 30rpx;
+}
+
+.movable-item .delete-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -120rpx; 
+  width: 120rpx;
+  height: 180rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 226rpx;
+  /* z-index: -1; */
+  background: #efeff3;
+  text-align: right;
+}
+
+.delete-img{
+  width: 86rpx;
+  height: auto;
+  vertical-align: middle;
+}
+.einvoice{
+  height: auto;
+  width: 674rpx;
+  padding: 28rpx 22rpx 20rpx 22rpx;
+  background: #fff;
+  z-index: 100;
+  font-size: 26rpx;
+  color: #555555;
+  /* margin-top: 20rpx; */
+  
+  border-radius: 10rpx;
+}
+.eheight{
+  margin-bottom: 0rpx;
+  padding-bottom: 0;
+}

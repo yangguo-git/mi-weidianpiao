@@ -1,0 +1,10 @@
+<!--pages/payPoint/index.wxml-->
+<view>
+  <view class=''>
+    <view class='flex item' wx:for='{{imgList}}' wx:key='{{index}}'>
+      <image class='logo' mode='widthFix' src='{{item.img}}'></image>
+      <view class='title'>{{item.title}}</view>
+      <view class='tips'>敬请期待</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,156 @@
+/* pages/information/index.wxss */
+page{
+    background: #efeff3;   
+    padding-bottom: 120rpx;
+}
+.main-layout{
+  min-height:90vh;
+}
+.layout{
+    background: #fff;
+    width: 714rpx;
+    border-radius: 10rpx;
+    box-shadow: 0px 0px 10px #eee;
+    margin: 32rpx 18rpx 0rpx 18rpx;
+    /* padding-bottom: 160rpx; */
+}
+.top{
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+.table{
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    height: 108rpx;
+    line-height: 108rpx;
+    position: relative;
+}
+.table-item{
+    width: 50%;
+}
+.table-item.on{
+    width: 50%;
+    color: #1aad1a;
+}
+.bar{
+    width: 120rpx;
+    height: 12rpx;
+    background: #1aad1a;
+    position: absolute;
+    bottom: 0;
+    left: 126rpx;
+    z-index: 999;
+}
+.bar2{
+    width: 120rpx;
+    height: 12rpx;
+    background: #1aad1a;
+    position: absolute;
+    bottom: 0;
+    left: 468rpx;
+    z-index: 999;
+}
+.input-item{
+    height: 104rpx;
+    line-height: 104rpx;
+    align-items: center;
+    font-size: 34rpx;
+    border-bottom: 1px solid #eee;
+    padding-left: 40rpx;
+}
+.input-item .flex.left{
+    width: 160rpx;
+}
+.border-none{
+  border-bottom: none;
+}
+.start{
+    color: #fc4141;
+}
+.input{
+    width: 454rpx;
+}
+.btn-zoom{
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0rpx;
+    width: 750rpx;
+    border-top: 1px solid #eee;
+    padding: 24rpx 0;
+    background: #fff;
+    opacity: 1;
+    z-index: 999;
+    
+}
+.btn-zoom button{
+    height: 92rpx;
+    line-height: 92rpx;
+    font-size: 34rpx;
+    width: 700rpx;
+}
+.plus-img{
+  width: 58rpx;
+  height: 58rpx;
+  padding-right: 30rpx;
+}
+.input.flex.between{
+  align-items: center;
+}
+/* .form{
+  margin-bottom: 
+} */
+.line{
+  width:714rpx;
+  display: block;
+}
+.invoiceTitle{
+  padding: 12rpx  10rpx;
+  font-size: 26rpx;
+  color: #1aad1a;
+  border: 1px solid #1aad1a;
+  border-radius: 8rpx;
+  width: 110rpx;
+  line-height: 30rpx;
+  margin-right: 30rpx;
+}
+.name input{
+  width: 266rpx;
+  display: block
+}
+.formore{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  height:100rpx;
+  line-height:120rpx;
+  font-size: 32rpx;
+}
+.formore image{
+  width: 50rpx;
+  padding-left: 20rpx;
+  padding-top:50rpx;
+}
+.titleItemCover{
+  position: fixed;
+  left: 18rpx;
+  top: 250rpx;
+  background:#fff;
+  opacity: 1;
+  z-index: 999;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.input-items{
+    height: 104rpx;
+    line-height: 104rpx;
+    align-items: center;
+    font-size: 34rpx;
+    border-bottom: 1px solid #eee;
+    padding-left: 40rpx;
+    width: 674rpx;
+}
+.input-item .input{
+  margin-left: 40rpx;
+}

@@ -1,0 +1,32 @@
+/* components/invoiceitem/invoiceitem.wxss */
+.invoice-item{
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  border-top: 1px solid #ededed;
+}
+.icon-gouxuan-xuanzhong-yuankuang,.icon-weigouxuan{
+  color: #07af12;
+  font-size: 40rpx;
+  margin-right: 30rpx;
+}
+.icon-youjiantou{
+  /* padding-right: 20rpx; */
+  /* width: 17rpx; */
+  color: #cccccc;
+  font-size: 50rpx;
+  margin-right: 16rpx;
+}
+.invoice-item-left{
+  align-items: center;
+}
+.type{
+  font-size: 28rpx;
+  color: #999999;
+}
+.to-detail{
+  justify-content: space-between;
+  align-items: center;
+  width: 624rpx;
+}

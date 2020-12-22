@@ -1,0 +1,188 @@
+<view class='main-layout'>
+  <view class='layout main-zoom' bindtap='hideCover' wx:if="{{uuid}}">
+      <!-- <view class='top'>
+          <view class='flex table'>
+              <view bindtap='tableEvent' data-index='1' class="{{tableItemIndex == 1 ? 'table-item on' :'table-item'}}">{{detail.invoiceType === 0 ? '企业' : '个人'}}</view>
+          </view>
+          <view class="{{tableItemIndex == 1 ? 'bar' :'bar2'}}"></view>
+      </view> -->
+      <!-- <form  bindsubmit="formSubmit1" wx:if="{{detail.invoiceType === 0}}" report-submit='true'> -->
+      <form  bindsubmit="formSubmit1" report-submit='true'>
+      <view>
+        <view class='input-item flex between border-none'>
+          <view class='flex '>
+              <view>发票类型</view>
+          </view>
+          <view class='input'>电票</view>
+        </view>
+        <view class='input-item flex between border-none' wx:if="{{detail.orderNo}}">
+          <view class='flex '>
+              <view>订单编号</view>
+          </view>
+          <view class='input'>{{detail.orderNo}}</view>
+        </view>
+        <view class='input-item flex between border-none' wx:if="{{detail.orderTime}}">
+          <view class='flex '>
+              <view>下单时间</view>
+          </view>
+          <view class='input'>{{detail.orderTime}}</view>
+        </view>
+        <view class='input-item flex between border-none' wx:if="{{detail.amount}}">
+          <view class='flex '>
+              <view>合计金额</view>
+              <!-- <view class='start'>*</view> -->
+          </view>
+          <view class='input'>{{detail.amount}}元</view>
+        </view>
+        <view class='input-item flex between border-none' wx:if="{{detail.itemName}}">
+          <view class='flex '>
+              <view>商品名称</view>
+          </view>
+          <view class='input'>{{detail.itemName}}</view>
+        </view>
+        <view class='input-item flex between' wx:if="{{detail.name}}">
+          <view class='flex label'>企业名称</view>
+          <view class='input between enterprise'>
+          {{detail.name}}
+          </view>
+            <!-- <input disabled bindinput='inputEvent' class='input' value='{{detail.name}}' name="name" type='text' placeholder='请输入企业名称'></input> -->
+            <input hidden='{{true}}' disabled bindinput='inputEvent' class='input' value='{{detail.name}}' name="name" type='text' placeholder='请输入企业名称'></input>
+            <!-- <view  disabled bindinput='inputEvent' class='input' value='' name="name" type='text' placeholder='请输入企业名称'></view> -->
+        </view>
+        <view class='input-item flex between' wx:if="{{detail.code}}">
+          <view class='flex label'>
+              <view>企业税号</view>
+              <!-- <view class='start'>*</view> -->
+          </view>
+          <input disabled value='{{detail.code}}' name="code" class='input' type='text'></input>
+        </view>
+        <!-- <view hidden="{{showMoreStatus}}" bindtap='showMore' >
+          <view class='formore'>
+            <view>展开完整信息</view>
+            <view class=''>
+              <image mode='widthFix' src="/images/more.png"></image>
+            </view>
+          </view>
+          <view>
+            <image class='line' src='/images/line.png' mode='widthFix'></image>
+          </view>
+        </view> -->
+        <view hidden="{{!showMoreStatus}}">
+          <view class='input-item flex between' wx:if="{{detail.email}}">
+            <view class='flex '>
+                <view>邮箱账号</view>
+            </view>
+            <input disabled value='{{detail.email}}' name="email" class='input' type='text' placeholder=''></input>
+          </view>
+          <view class='input-item flex between' wx:if="{{detail.mobile}}">
+            <view class='flex '>
+                <view>手机号码</view>
+            </view>
+            <input disabled value="{{detail.mobile}}" name="mobile" class='input' type='text' placeholder=''></input>
+          </view>
+          <view class='input-item flex between' wx:if="{{detail.addr}}">
+            <view class='flex '>
+                <view>注册地址</view>
+            </view>
+            <input disabled value="{{detail.addr}}" name="addr" class='input' type='text' placeholder=''></input>
+          </view>
+          <view class='input-item flex between' wx:if="{{detail.phone}}">
+            <view class='flex '>
+                <view>电话号码</view>
+            </view>
+            <input disabled value="{{detail.phone}}" name="phone" class='input' type='text' placeholder=''></input>
+          </view>
+          <view class='input-item flex between' wx:if="{{detail.bank}}">
+            <view class='flex '>
+                <view>开户银行</view>
+            </view>
+            <input disabled value='{{detail.bank}}' name="bank" class='input' type='text' placeholder=''></input>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{detail.account}}">
+            <view class='flex '>
+                <view>开户账号</view>
+            </view>
+            <input disabled value='{{detail.account}}' name="account" class='input' type='text' placeholder=''></input>
+          </view>
+          <view>
+            <image class='line' src='/images/line.png' mode='widthFix'></image>
+          </view>
+        </view>
+      </view>
+      <view class='btn-zoom'>
+          <button formType="submit" type='primary'>提交</button>
+      </view>
+      </form>
+      <form  bindsubmit="formSubmit2" wx:if="{{detail.invoiceType === 1}}" report-submit='true'>
+        <view>
+          <view class='input-item flex between border-none'>
+            <view class='flex '>
+                <view>发票类型</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input'>电票</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{detail.orderNo}}">
+            <view class='flex '>
+                <view>订单编号</view>
+            </view>
+            <view class='input'>{{detail.orderNo}}</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{detail.orderTime}}">
+            <view class='flex '>
+                <view>下单时间</view>
+            </view>
+            <view class='input'>{{detail.orderTime}}</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{detail.amount}}">
+            <view class='flex '>
+                <view>合计金额</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input'>{{detail.amount}}元</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{detail.itemName}}">
+            <view class='flex '>
+                <view>商品名称</view>
+            </view>
+            <view class='input'>{{detail.itemName}}</view>
+          </view>
+          <view class='input-item flex between'>
+            <view class='flex '>
+                <view>发票抬头</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input between'>
+              <input disabled value='{{detail.name}}' class='input' name="name" type='text' placeholder=''></input>
+              <!-- <button wx:if="{{invoiceTitleFlag}}" bindopensetting="opensetting" open-type="openSetting"  style='border:none;' plain>
+                <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image>
+              </button>
+              <button bindtap='invoiceTitle' wx:if="{{!invoiceTitleFlag}}" style='border:none;' plain>
+                <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image>
+              </button> -->
+            </view>
+          </view>
+          <view class='input-item flex between' wx:if="{{detail.email}}">
+            <view class='flex '>
+                <view>邮箱账号</view>
+            </view>
+            <input disabled value='{{detail.email}}' name="email" class='input' type='text' placeholder=''></input>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{detail.mobile}}">
+            <view class='flex '>
+                <view>手机号码</view>
+            </view>
+            <input disabled name="mobile" value='{{detail.mobile}}' class='input' type='text' placeholder=''></input>
+          </view>
+          <view>
+            <image class='line' src='/images/line.png' mode='widthFix'></image>
+          </view>
+        </view>
+        <view class='btn-zoom'>
+            <button formType="submit" type='primary'>提交</button>
+        </view>
+      </form>
+  </view>
+  <copyRight></copyRight>
+</view>
+

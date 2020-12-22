@@ -1,0 +1,12 @@
+<!--pages/sendEmail/index.wxml-->
+<!-- <text>pages/sendEmail/index.wxml</text> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view class='content'>
+      <image lazy-load="{{true}}" bindload="imageLoad" class='img' src='{{pdf}}' mode='widthFix'></image>
+      <input type='text' placeholder='请输入邮箱' bindinput='inputEvent'></input>
+      <button type='primary' bindtap='sendMyInvoiceToEmail'>发送</button>  
+    </view>
+  </view>
+  <copyRight></copyRight>
+</view>

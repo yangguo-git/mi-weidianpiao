@@ -1,0 +1,24 @@
+<view class="main">
+  <view class="top">
+    <view class="logo">
+      <image src="../../icons/logo.png" style="width:205rpx;height:205rpx;margin-bottom:0rpx;"></image>
+    </view>
+    <view class="t-title">极速发票服务</view>
+    <view class="t-subTitle">北京微应科技有限公司</view>
+  </view>
+  <view class="middle">
+    <view class="m-title">
+      使用优惠券需要获得以下授权：
+    </view>
+    <view class="m-subTitle">
+      · 获得您的公开信息（昵称、头像等）
+    </view>
+  </view>
+  <view class="bottom" wx:if="{{!isAudit}}">
+    <button class="b-refuse" bindtap="refuse">拒绝</button>
+    <button class="b-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+  </view>
+  <view class="bottom-audit" wx:if="{{isAudit}}">
+    <button class="b-login-audit" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+  </view>
+</view>

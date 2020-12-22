@@ -1,0 +1,401 @@
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view class='layout' bindtap='hideCover' wx:if="{{!appId}}">
+        <view class='top'>
+            <view class='flex table'>
+                <view bindtap='tableEvent' data-index='1' class="{{tableItemIndex == 1 ? 'table-item on' :'table-item'}}">企业</view>
+                <view bindtap='tableEvent' data-index='2' class="{{tableItemIndex == 2 ? 'table-item on' :'table-item'}}">个人</view>
+            </view>
+            <view class="{{tableItemIndex == 1 ? 'bar' :'bar2'}}"></view>
+        </view>
+        <form  bindsubmit="formSubmit1" hidden="{{!(tableItemIndex == 1)}}" report-submit='true'>
+        <view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>企业名称</view>
+                <view class='start'>*</view>
+            </view>
+            <view class='input flex between name'>
+              <input bindinput='inputEvent' value='{{title}}' name="name" type='text' placeholder='请输入企业名称'></input>
+              <button wx:if="{{invoiceTitleFlag}}" bindopensetting="opensetting" open-type="openSetting"  style='border:none;padding-top:24rpx;' plain>
+                <!-- <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image> -->
+                <view class='invoiceTitle'>获取抬头</view>
+              </button>
+              <button bindtap='invoiceTitle' wx:if="{{!invoiceTitleFlag}}" style='border:none;' plain>
+                <!-- <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image> -->
+                <view class='invoiceTitle'>获取抬头</view>
+              </button>
+            </view>
+          </view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>企业税号</view>
+                <view class='start'>*</view>
+            </view>
+            <input value='{{taxNumber}}' name="code" class='input' type='text' placeholder='请输入纳税人识别号'></input>
+          </view>
+          <view hidden="{{showMoreStatus}}" bindtap='showMore'>
+            <view class='formore'>
+              <view>展开完整信息</view>
+              <view class=''>
+                <image mode='widthFix' src="/images/more.png"></image>
+              </view>
+            </view>
+            <view>
+              <image class='line' src='/images/line.png' mode='widthFix'></image>
+            </view>
+          </view>
+          <view hidden="{{!showMoreStatus}}">
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>邮箱账号</view>
+              </view>
+              <input value='{{defaultEmail}}' name="email" class='input' type='text' placeholder='请输入邮箱账号'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>手机号码</view>
+              </view>
+              <input name="mobile" class='input' type='text' placeholder='请输入手机号码'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>注册地址</view>
+              </view>
+              <input name="addr" class='input' type='text' placeholder='请输入注册地址'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>电话号码</view>
+              </view>
+              <input name="phone" class='input' type='text' placeholder='请输入电话号码'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>开户银行</view>
+              </view>
+              <input value='{{bankName}}' name="bank" class='input' type='text' placeholder='请输入开户银行'></input>
+            </view>
+            <view class='input-item flex between border-none'>
+              <view class='flex left'>
+                  <view>开户账号</view>
+              </view>
+              <input value='{{bankAccount}}' name="account" class='input' type='text' placeholder='请输入开户账号'></input>
+            </view>
+            <view>
+              <image class='line' src='/images/line.png' mode='widthFix'></image>
+            </view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>发票类型</view>
+            </view>
+            <view class='input'>电票</view>
+          </view>
+          <!-- <view class='input-item flex between'>
+            <view class='flex '>
+                <view>订单号</view>
+                <view class='start'>*</view>
+            </view>
+            <view class='input'>{{orderNo}}</view>
+          </view> -->
+          <!-- <view class='input-item flex between'>
+            <view class='flex '>
+                <view>电话</view>
+            </view>
+            <input class='input' type='text' placeholder='请输入电话'></input>
+          </view> -->
+          <view class='input-item flex between border-none' wx:if="{{timestamp}}">
+            <view class='flex left'>
+                <view>下单时间</view>
+            </view>
+            <view class='input'>{{timestamp}}</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{orderMoney}}">
+            <view class='flex left'>
+                <view>合计金额</view>
+            </view>
+            <view class='input'>{{orderMoney}}元</view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>商品名称</view>
+            </view>
+            <view class='input'>永生花</view>
+          </view>
+          <view class='titleItemCover' hidden='{{titleItemCover}}'>
+            <scroll-view scroll-y style="height: 200px;">
+              <view id="titleItem" bindtap='selectIvoiceItem' wx:key="{{item.name}}" data-index='{{index}}' class='input-items' wx:for="{{titleItem}}">{{item.name}}</view>
+            </scroll-view>
+          </view>
+        </view>
+        <view class='btn-zoom'>
+            <button formType="submit" type='primary'>提交</button>
+        </view>
+        </form>
+        <form  bindsubmit="formSubmit2" hidden="{{!(tableItemIndex == 2)}}" report-submit='true'>
+        <view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>发票抬头</view>
+                <view class='start'>*</view>
+            </view>
+            <view class='input flex between'>
+              <input value='{{title}}' name="name" type='text' placeholder='请输入发票抬头'></input>
+              <!-- <button wx:if="{{invoiceTitleFlag}}" bindopensetting="opensetting" open-type="openSetting"  style='border:none;' plain>
+                <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image>
+              </button>
+              <button bindtap='invoiceTitle' wx:if="{{!invoiceTitleFlag}}" style='border:none;' plain>
+                <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image>
+              </button> -->
+            </view>
+          </view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>邮箱账号</view>
+            </view>
+            <input value='{{defaultEmail}}' name="email" class='input' type='text' placeholder='请输入邮箱账号'></input>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>手机号码</view>
+            </view>
+            <input name="mobile" class='input' type='text' placeholder='请输入手机号码'></input>
+          </view>
+          <view>
+            <image class='line' src='/images/line.png' mode='widthFix'></image>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>发票类型</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input'>电票</view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>下单时间</view>
+            </view>
+            <view class='input'>{{timestamp}}</view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>合计金额</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input'>{{orderMoney}}元</view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>商品名称</view>
+            </view>
+            <view class='input'>永生花</view>
+          </view>
+        </view>
+        <view class='btn-zoom'>
+            <button formType="submit" type='primary'>提交</button>
+        </view>
+        </form>
+    </view>
+
+    <view class='layout' bindtap='hideCover' wx:if="{{appId}}">
+        <view class='top'>
+            <view class='flex table'>
+                <view bindtap='tableEvent' data-index='1' class="{{tableItemIndex == 1 ? 'table-item on' :'table-item'}}">企业</view>
+                <view bindtap='tableEvent' data-index='2' class="{{tableItemIndex == 2 ? 'table-item on' :'table-item'}}">个人</view>
+            </view>
+            <view class="{{tableItemIndex == 1 ? 'bar' :'bar2'}}"></view>
+        </view>
+        <form  bindsubmit="formSubmit1" hidden="{{!(tableItemIndex == 1)}}" report-submit='true'>
+        <view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>企业名称</view>
+                <view class='start'>*</view>
+            </view>
+            <view class='input flex between name'>
+              <input bindinput='inputEvent' value='{{title}}' name="name" type='text' placeholder='请输入企业名称'></input>
+              <button wx:if="{{invoiceTitleFlag}}" bindopensetting="opensetting" open-type="openSetting"  style='border:none;padding-top:24rpx;' plain>
+                <!-- <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image> -->
+                <view class='invoiceTitle'>获取抬头</view>
+              </button>
+              <button bindtap='invoiceTitle' wx:if="{{!invoiceTitleFlag}}" style='border:none;' plain>
+                <!-- <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image> -->
+                <view class='invoiceTitle'>获取抬头</view>
+              </button>
+            </view>
+          </view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>企业税号</view>
+                <view class='start'>*</view>
+            </view>
+            <input value='{{taxNumber}}' name="code" class='input' type='text' placeholder='请输入纳税人识别号'></input>
+          </view>
+          <view hidden="{{showMoreStatus}}" bindtap='showMore'>
+            <view class='formore'>
+              <view>展开完整信息</view>
+              <view class=''>
+                <image mode='widthFix' src="/images/more.png"></image>
+              </view>
+            </view>
+            <view>
+              <image class='line' src='/images/line.png' mode='widthFix'></image>
+            </view>
+          </view>
+          <view hidden="{{!showMoreStatus}}">
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>邮箱账号</view>
+              </view>
+              <input value='{{defaultEmail}}' name="email" class='input' type='text' placeholder='请输入邮箱账号'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>手机号码</view>
+              </view>
+              <input name="mobile" class='input' type='text' placeholder='请输入手机号码'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>注册地址</view>
+              </view>
+              <input name="addr" class='input' type='text' placeholder='请输入注册地址'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>电话号码</view>
+              </view>
+              <input name="phone" class='input' type='text' placeholder='请输入电话号码'></input>
+            </view>
+            <view class='input-item flex between'>
+              <view class='flex left'>
+                  <view>开户银行</view>
+              </view>
+              <input value='{{bankName}}' name="bank" class='input' type='text' placeholder='请输入开户银行'></input>
+            </view>
+            <view class='input-item flex between border-none'>
+              <view class='flex left'>
+                  <view>开户账号</view>
+              </view>
+              <input value='{{bankAccount}}' name="account" class='input' type='text' placeholder='请输入开户账号'></input>
+            </view>
+            <view>
+              <image class='line' src='/images/line.png' mode='widthFix'></image>
+            </view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>发票类型</view>
+            </view>
+            <view class='input'>电票</view>
+          </view>
+          <!-- <view class='input-item flex between'>
+            <view class='flex '>
+                <view>订单号</view>
+                <view class='start'>*</view>
+            </view>
+            <view class='input'>{{orderNo}}</view>
+          </view> -->
+          <!-- <view class='input-item flex between'>
+            <view class='flex '>
+                <view>电话</view>
+            </view>
+            <input class='input' type='text' placeholder='请输入电话'></input>
+          </view> -->
+          <view class='input-item flex between border-none' wx:if="{{timestamp}}">
+            <view class='flex left'>
+                <view>下单时间</view>
+            </view>
+            <view class='input'>{{timestamp}}</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{orderMoney}}">
+            <view class='flex left'>
+                <view>合计金额</view>
+            </view>
+            <view class='input'>{{orderMoney}}元</view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>商品名称</view>
+            </view>
+            <view class='input'>永生花</view>
+          </view>
+          <view class='titleItemCover' hidden='{{titleItemCover}}'>
+            <scroll-view scroll-y style="height: 200px;">
+              <view id="titleItem" bindtap='selectIvoiceItem' wx:key="{{item.name}}" data-index='{{index}}' class='input-items' wx:for="{{titleItem}}">{{item.name}}</view>
+            </scroll-view>
+          </view>
+        </view>
+        <view class='btn-zoom'>
+            <button formType="submit" type='primary'>提交</button>
+        </view>
+        </form>
+        <form  bindsubmit="formSubmit2" hidden="{{!(tableItemIndex == 2)}}" report-submit='true'>
+        <view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>发票抬头</view>
+                <view class='start'>*</view>
+            </view>
+            <view class='input flex between'>
+              <input value='{{title}}' name="name" type='text' placeholder='请输入发票抬头'></input>
+              <!-- <button wx:if="{{invoiceTitleFlag}}" bindopensetting="opensetting" open-type="openSetting"  style='border:none;' plain>
+                <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image>
+              </button>
+              <button bindtap='invoiceTitle' wx:if="{{!invoiceTitleFlag}}" style='border:none;' plain>
+                <image class='plus-img' mode='widthFix' src="/images/plus.jpg"></image>
+              </button> -->
+            </view>
+          </view>
+          <view class='input-item flex between'>
+            <view class='flex left'>
+                <view>邮箱账号</view>
+            </view>
+            <input value='{{defaultEmail}}' name="email" class='input' type='text' placeholder='请输入邮箱账号'></input>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>手机号码</view>
+            </view>
+            <input name="mobile" class='input' type='text' placeholder='请输入手机号码'></input>
+          </view>
+          <view>
+            <image class='line' src='/images/line.png' mode='widthFix'></image>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>发票类型</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input'>电票</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{timestamp}}">
+            <view class='flex left'>
+                <view>下单时间</view>
+            </view>
+            <view class='input'>{{timestamp}}</view>
+          </view>
+          <view class='input-item flex between border-none' wx:if="{{orderMoney}}">
+            <view class='flex left'>
+                <view>合计金额</view>
+                <!-- <view class='start'>*</view> -->
+            </view>
+            <view class='input'>{{orderMoney}}元</view>
+          </view>
+          <view class='input-item flex between border-none'>
+            <view class='flex left'>
+                <view>商品名称</view>
+            </view>
+            <view class='input'>永生花</view>
+          </view>
+        </view>
+        <view class='btn-zoom'>
+            <button formType="submit" type='primary'>提交</button>
+        </view>
+        </form>
+    </view>
+  </view>
+  <copyRight></copyRight>
+</view>
+

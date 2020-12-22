@@ -1,0 +1,62 @@
+<!--pages/invoiceDtail/index.wxml-->
+<!-- <text>pages/invoiceDtail/index.wxml</text> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view class='flex top'>
+      <icon type='success' size='20'></icon>
+      <view>开票成功</view>
+    </view>
+    <view class='content'>
+      <view class='name'><image class='img' src='/images/title.png' mode='widthFix'></image></view>
+      <view class='item flex'>
+        <view class='title'>付款方</view>
+        <view>{{detail.payer}}</view>
+      </view>
+      <view class='item flex'>
+        <view class='title'>收款方</view>
+        <view>{{detail.payee}}</view>
+      </view>
+      <view class='bar'><image class='img' src='/images/bar.jpg' mode='widthFix'></image></view>
+      <view class='item flex'>
+        <view class='title'>发票金额</view>
+        <view class='flex'><text class=''>{{detail.money}}</text>元</view>
+      </view>
+      <view class='item flex'>
+        <view class='title'>开票时间</view>
+        <view>{{detail.time}}</view>
+      </view>
+      <!-- <view class='item flex'>
+        <view class='title pro'>项目</view>
+        <view>交通费</view>
+      </view> -->
+      <view class='bar'><image class='img' src='/images/bar.jpg' mode='widthFix'></image></view>
+      <view class='item flex'>
+        <view class='title pro'>发票代码</view>
+        <view>{{detail.invoiceCode}}</view>
+      </view>
+      <view class='item flex'>
+        <view class='title pro'>发票号码</view>
+        <view>{{detail.invoiceNo}}</view>
+      </view>
+      <view class='item flex'>
+        <view class='title pro'>校验码</view>
+        <view>{{detail.checkCode}}</view>
+      </view>
+    </view>
+    <view class='footer'>
+      <view class='flex main border' bindtap='addToCard'>
+        <image class='image' src='/images/paper2.png' mode='widthFix'></image>
+        <view wx:if="{{!detail.cardCode}}">领取到微信卡包</view>
+        <view wx:if="{{detail.cardCode}}">打开发票</view>
+      </view>
+      <view class='flex main space' bindtap='toSendMail'>
+        <view class='flex' >
+          <image class='image' src='/images/email2.png' mode='widthFix'></image>
+          <view>发送到邮件</view>
+        </view>
+        <view class='more'>查看详情>></view>
+      </view>
+    </view>
+  </view>
+  <copyRight></copyRight>
+</view>  

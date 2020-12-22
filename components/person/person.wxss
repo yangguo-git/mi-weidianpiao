@@ -1,0 +1,58 @@
+/* components/person/person.wxss */
+.contain{
+  /* margin: 16rpx; */
+  border-bottom-left-radius: 19rpx;
+  border-bottom-right-radius: 19rpx;
+}
+.person-item{
+  font-size: 32rpx;
+  color: #000;
+  margin: 0rpx 30rpx;
+  padding: 26rpx 0rpx;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+}
+.person-label{
+  width: 134rpx;
+  color: #000;
+  text-align-last: justify;
+  padding-right: 36rpx;
+}
+.input{
+  width: 520rpx;
+}
+.icon-font{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 40rpx;
+  color: #ccc;
+}
+.font-zoom{
+  width: 100%;
+  text-align: center;
+  /* border-bottom: 1px solid #d8d8d8; */
+  padding: 24rpx 0;
+}
+.footer{
+  background: #efeff3;
+  /* margin-top: 30rpx; */
+  overflow: hidden;
+}
+
+.phone-input{
+  width: 300rpx;
+}
+.align{
+  align-items: center;
+  width: 520rpx;
+  justify-content: space-between;
+}
+.get-phone-btn{
+  /* width: 100rpx; */
+  /* height: 100rpx; */
+  font-size: 30rpx;
+  padding:0 10rpx!important;
+  margin: 0!important;
+  line-height: 2;
+}

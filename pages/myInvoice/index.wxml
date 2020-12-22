@@ -1,0 +1,97 @@
+<!--pages/success/index.wxml-->
+<!-- <text>pages/success/index.wxml</text> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view class='top-main' style="z-index:999!important">
+      <view class='table flex'>
+        <view class='flex item' bindtap='showActionSheet'>
+          <view>{{invoiceType}}</view>
+          <text class='iconfont icon-xiala icons'></text>
+        </view>
+        <!-- <view class='flex item' bindtap='showInvoiceType'>
+          <view>发票类型</view>
+          <text class='iconfont icon-xiala icons'></text>
+        </view> -->
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class='flex item'>
+            <view>{{selectDate}}</view>
+            <text class='iconfont icon-xiala icons'></text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='main movable-item {{ item.type === 1? "eheight" :""}}' wx:for="{{dataList}}" wx:key='{{item.id}}' data-paperstatus ='{{item.paperStatus}}' bindtap='toDetail' data-type ='{{item.type}}' data-index ='{{index}}'>
+        <movable-area wx:if='{{item.type == 2}}'>
+          <movable-view
+            out-of-bounds="true"
+            direction="horizontal"
+            inertia="true"
+            data-index="{{index}}"
+            x="{{item.xmove}}"
+            damping='18'
+            bindtouchstart="handleTouchStart"
+            bindtouchend="handleTouchEnd"
+            bindchange="handleMovableChange">
+            
+            <view class='flex'>
+              <view>付款方：{{item.payer}}</view>
+              <view>{{item.time}}</view>
+            </view>
+            <view class='conpaney'>{{item.payee}}</view>
+            <view class='flex money between'>
+              <view wx:if='{{item.paperStatus !== 0 && item.paperStatus !== 1 && item.paperStatus !== 3}}'></view>
+              <view wx:if="{{item.paperStatus === 1}}">发票金额：￥{{item.money}}</view>
+              <view wx:if="{{item.paperStatus === 3}}">已提交</view>
+              <view wx:if="{{item.paperStatus === 0 }}">已提交</view>
+              <view class='flex footer'>
+                <image wx:if="{{item.type == 1 }}"  class='img' src='/images/e.png' mode='widthFix'></image>
+                <image wx:if="{{item.type == 1 && item.emailStatus == 1}}" class='img' src='/images/email.png' mode='widthFix'></image>
+                <image wx:if="{{item.type == 1 && item.carStatus == 1}}" class='img' src='/images/open.png' mode='widthFix'></image>
+                <image wx:if="{{item.type == 2}}" class='img' src='/images/paper.png' mode='widthFix'></image>
+              </view>
+            </view>
+          </movable-view>
+          <view data-id='{{item.id}}' class="delete-btn" catchtap="handleDeleteInvioce">
+            <image class='delete-img' src='/images/delete.png' mode='widthFix'></image>
+          </view>
+        </movable-area>
+        <view wx:if='{{item.type == 1}}' class='einvoice'>
+          <view class='flex'>
+            <view>付款方：{{item.payer}}</view>
+            <view>{{item.time}}</view>
+          </view>
+          <view class='conpaney'>{{item.payee}}</view>
+          <view class='flex money'>
+            <view wx:if="{{item.type === 1}}">发票金额：￥{{item.money}}</view>
+            <!-- <view wx:if="{{item.paperStatus === 0 }}">正在开票中</view> -->
+            <view class='flex footer'>
+              <image wx:if="{{item.type == 1 }}"  class='img' src='/images/e.png' mode='widthFix'></image>
+              <image wx:if="{{item.type == 1 && item.emailStatus == 1}}" class='img' src='/images/email.png' mode='widthFix'></image>
+              <image wx:if="{{item.type == 1 && item.carStatus == 1}}" class='img' src='/images/open.png' mode='widthFix'></image>
+              <image wx:if="{{item.type == 2}}" class='img' src='/images/paper.png' mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='nodata' wx:if="{{requestStatus && dataList.length == 0}}">暂无数据</view>
+    <view class="box flex {{showType ? 'on' : ''}}">
+    <!-- <view class="box flex"> -->
+      <button class='item' bindtap='clickTypeItem'>全部</button>
+      <button class='item' bindtap='clickTypeItem'>通讯费</button>
+      <button class='item' bindtap='clickTypeItem'>餐饮</button>
+      <button class='item' bindtap='clickTypeItem'>交通</button>
+      <button class='item' bindtap='clickTypeItem'>其他</button>
+    </view>
+    <!-- <view class="box2">
+      <view class='flex invoice-type {{ index !== (invoiceType.length - 1) ? "border" : ""}}' wx:for="{{invoiceType}}" wx:key='{{item}}' data-index="{{index}}" bindtap='selectInvoiceEvent'>
+        <view>{{item}}</view>
+        <view><icon wx:if="{{selectInvoiceIndex == index}}" type="success" size="16" /></view>
+      </view>
+    </view> -->
+    <view class='cover' wx:if="{{showType}}" bindtap='coverEvent'></view>
+  </view>
+  <copyRight></copyRight>
+</view>
+

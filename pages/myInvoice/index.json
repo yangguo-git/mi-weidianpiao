@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "开票历史",
+  "usingComponents": {
+    "copyRight": "../../components/copyRight/index"
+  }
+}

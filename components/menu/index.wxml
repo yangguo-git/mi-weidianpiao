@@ -1,0 +1,27 @@
+<!--components/menu/index.wxml-->
+<!-- <text>components/menu/index.wxml</text> -->
+<view wx:if="{{type === 0 || type === 1 || type === 2}}">
+  <view class='menu-title'>票据类型</view>
+  <view class="menu-layout flex {{type === 0 || type === 1 ? 'sigle' : ''}}">
+    <view class='menu-item flex align' data-index='0' bindtap='select' wx:if="{{type === 0 || type === 2}}">
+      <text class='iconfont icon-weigouxuan ' data-index='0' wx:if="{{selectTypeIndex !== 0}}"></text>
+      <text class="iconfont {{type === 0 ? 'icon-piaojuleixingtubiao' : 'icon-gouxuan-xuanzhong-yuankuang'}}" data-index='0' wx:if="{{selectTypeIndex === 0}}"></text>
+      <view>电子发票</view>
+    </view>
+    <!-- <view class='menu-item flex align diaabled' data-index='0' wx:if="{{type !== 0 && type !== 2}}">
+      <text class='iconfont icon-weigouxuan' data-index='0' wx:if="{{selectTypeIndex !== 0}}"></text>
+      <text class='iconfont icon-gouxuan-xuanzhong-yuankuang' data-index='0' wx:if="{{selectTypeIndex === 0}}"></text>
+      <view>电子发票</view>
+    </view> -->
+    <view class='menu-item flex align' data-index='1' bindtap='select' wx:if="{{type === 1 || type === 2}}"> 
+      <text class='iconfont icon-weigouxuan' data-index='1' wx:if="{{selectTypeIndex !== 1}}"></text>
+      <text class="iconfont {{type === 1 ? 'icon-piaojuleixingtubiao' : 'icon-gouxuan-xuanzhong-yuankuang'}}" data-index='1' wx:if="{{selectTypeIndex === 1}}" ></text>
+      <view>纸质发票</view>
+    </view>
+    <!-- <view class='menu-item flex align diaabled' data-index='1' wx:if="{{type !== 1 && type !== 2}}"> 
+      <text class='iconfont icon-weigouxuan' data-index='1' wx:if="{{selectTypeIndex !== 1}}"></text>
+      <text class='iconfont icon-gouxuan-xuanzhong-yuankuang' data-index='1' wx:if="{{selectTypeIndex === 1}}" ></text>
+      <view>纸质发票</view>
+    </view> -->
+  </view>
+</view>

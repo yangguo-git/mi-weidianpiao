@@ -1,0 +1,25 @@
+<view>
+  <view class="content">
+    <view class="title">绑定审核人，将获得以下权限：</view>
+    <view class="desc">
+      <view class="desc-title">投放审核</view>
+      <view class="desc-detail">要投放优惠券时，作为审核人员进行查验</view>
+    </view>
+    <view class="sure">
+      <button bindtap="sureBind">确定绑定</button>
+    </view>
+  </view>
+  <view class="get-user-info" wx:if="{{userInfo_show}}">
+    <view class="get-user-info-modal">
+      <view class="get-user-info-top">
+        <image src="../../icons/get_info.png" style="width:153rpx;height:153rpx;border-radius:50%;border:6rpx solid #96c697" mode="aspectFill"></image>
+        <text>提示</text>
+        <text>点击下方按钮可授权</text>
+      </view>
+      <view class="get-user-info-bottom">
+       <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
+        <button  bindtap="closeModal">取消</button>
+      </view>
+    </view>
+  </view>
+</view>

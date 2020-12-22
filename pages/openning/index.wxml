@@ -1,0 +1,71 @@
+<!--pages/openning/index.wxml-->
+<!-- <text>pages/openning/index.wxml</text> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view>
+      <image class='images img' src='/images/time.gif' mode='widthFix'></image>
+      <view class='ing'>正在开票中</view>
+    </view>
+    <view class='content'>
+      <view class='name'>抬头信息</view>
+      <view class='item flex'>
+        <view class='title'>名称：</view>
+        <view class='right'>{{detail.name}}</view>
+      </view>
+      <view wx:if="{{detail.type === 0}}">
+        <view class='item flex'>
+          <view class='title'>手机：</view>
+          <view class='right'>{{detail.mobilePhone}}</view>
+        </view>
+        <view class='bar'><image class='img' src='/images/bar.jpg' mode='widthFix'></image></view>
+        <view hidden='{{!show}}'>
+          <view class='item flex'>
+            <view class='title'>邮箱：</view>
+            <view class='right'>{{detail.email}}</view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{detail.type === 1}}">
+        <view class='item flex'>
+          <view class='title'>税号：</view>
+          <view class='right'>{{detail.taxId}}</view>
+        </view>
+        <view class='bar'><image class='img' src='/images/bar.jpg' mode='widthFix'></image></view>
+        <view hidden='{{!show}}'>
+          <view class='item flex'>
+            <view class='title'>手机：</view>
+            <view class='right'>{{detail.mobilePhone}}</view>
+          </view>
+          <view class='item flex'>
+            <view class='title'>邮箱：</view>
+            <view class='right'>{{detail.email}}</view>
+          </view>
+          <!-- <view class='item flex'>
+            <view class='title pro'>单位地址：</view>
+            <view>交通费</view>
+          </view> -->
+          <!-- <view class='bar'><image class='img' src='/images/bar.jpg' mode='widthFix'></image></view> -->
+          <view class='item flex'>
+            <view class='title pro'>单位地址：</view>
+            <view class='right'>{{detail.address}}</view>
+          </view>
+          <view class='item flex'>
+            <view class='title pro'>电话：</view>
+            <view class='right'>{{detail.telephone}}</view>
+          </view>
+          <view class='item flex'>
+            <view class='title pro'>开户银行：</view>
+            <view class='right'>{{detail.bank}}</view>
+          </view>
+          <view class='item flex'>
+            <view class='title pro'>银行账户：</view>
+            <view class='right'>{{detail.account}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='font-zoom' hidden='{{show}}' bindtap='showInfo'><text class='iconfont icon-xiangxiajiantou icon-font'></text></view>
+      <view class='font-zoom' hidden='{{!show}}' bindtap='hideInfo'><text class='iconfont icon-xiangshangjiantou icon-font'></text></view>
+    </view>
+  </view>
+  <copyRight></copyRight>
+</view>

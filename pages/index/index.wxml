@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class='main-layout'>
+  <view class="container main-zoom">
+    <view>
+        <view class='index-logo'>
+            <image class='logo-img' mode='widthFix' src="/images/logo.jpg"></image>
+        </view>
+        <view class='index-tip'>请输入订单号开具发票</view>
+    </view>
+    <view class='form-main'>
+        <view class='input-item order flex'>
+            <view class='input-label'>订单号</view>
+            <view>
+                <input bindinput='orderSnChange' class='input-number' type='number' placeholder='请输入订单号开具发票'/>
+            </view>
+        </view>
+        <view class='input-item2 flex between'>
+            <view class='flex'>
+                <view class='input-label'>验证码</view>
+                <input bindinput='verifyCodeChange' class='input-code' type='text' placeholder='请输入验证码'/>
+            </view>
+            <view bindtap='getImageCode' class='code-zoom'>
+                <!-- <image class='code-img' mode='widthFix' src="/images/code-img.png"></image> -->
+                  <image class='code-img' mode='widthFix' src="{{codeImageUrl}}"></image>
+            </view>
+        </view>
+    </view>
+    <form report-submit='true' bindsubmit='openTicket' wx:if="{{!appId}}">
+      <button form-type='submit' type='primary' class='apply-btn'>申请开票</button>
+    </form>
+    <form report-submit='true' bindsubmit='openTicketTest' wx:if="{{appId}}">
+      <button form-type='submit' type='primary' class='apply-btn'>申请开票</button>
+    </form>
+    <navigator open-type='navigate' url='/pages/flashIndex/index'>
+      <view> 
+        <image class='an' mode='widthFix' src='/images/an.png'></image>
+      </view>
+    </navigator>
+  </view>
+  <copyRight></copyRight>
+</view>
+

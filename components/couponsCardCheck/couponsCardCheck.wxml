@@ -1,0 +1,54 @@
+<view>
+  <view class="content">
+    <view class="card-check" catchtap='checkChange'>
+      <block wx:if="{{cardCheck}}">
+        <icon type="success" size="39rpx"></icon>
+      </block>
+      <block wx:if="{{!cardCheck}}">
+        <view style="width:38rpx;height:38rpx;border-radius:50%;border:1rpx solid #bfbfbf;"></view>
+      </block>
+    </view>
+    <view class="card-content">
+      <view class="card-text">
+        <view class="card-store">{{ title }}
+        </view>
+        <view class="card-type">
+          <text wx:if="{{type==='DISCOUNT'}}">折扣券</text>
+          <text wx:if="{{type==='DONATE'}}">赠送券</text>
+          <text wx:if="{{type==='CASH'}}">现金券</text>
+          <text>数量: {{addStock}}张</text>
+        </view>
+        <view class="card-between-time">
+            <text>{{vailyTime}}</text>
+        </view>
+      </view>
+      <view class="card-use" wx:if="{{type==='DISCOUNT'}}">
+      <text class="hasCardUseSub">{{ value }}</text>
+      <text>折</text>
+    </view>
+    <view class="card-use" wx:if="{{type==='CASH'}}">
+      <text class="hasCardUseSub">{{ value }}</text>
+      <text>元</text>
+    </view>
+    <view class="card-use" wx:if="{{type==='DONATE'}}">
+      <text class="noCardUseSub">{{ value }}</text>
+    </view>
+      <view class="card-right-top-mark" wx:if="{{ cardUseCase === '2' ||cardUseCase === '3'}}">
+        <block wx:if="{{ cardUseCase === '2' }}">
+          <text>已使用</text>
+        </block>
+        <block wx:if="{{ cardUseCase === '3' }}">
+          <text>过期</text>
+        </block>
+      </view>
+      <view class="card-bg-color">
+        <block wx:if="{{ cardUseCase === '2' ||cardUseCase === '3'}}">
+          <image src="../../icons/card_dark.png" mode="widthFix" style="width: 215rpx;height: 161rpx;" />
+        </block>
+        <block wx:else>
+          <image src="../../icons/card_green.png" mode="widthFix" style="width: 215rpx;height: 161rpx;" />
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

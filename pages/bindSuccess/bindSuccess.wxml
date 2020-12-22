@@ -1,0 +1,12 @@
+<view>
+  <view class="content">
+    <view class="check">
+      <icon class="check-icon" type="success" size="110rpx"> </icon>
+    </view>
+    <view class="title">绑定成功</view>
+    <view class="sub-title">继续扫码可查看审核信息</view>
+    <view class="sure">
+      <button bindtap="sure">确定</button>
+    </view>
+  </view>
+</view>

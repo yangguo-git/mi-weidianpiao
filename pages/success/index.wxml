@@ -1,0 +1,15 @@
+<!--pages/success/index.wxml-->
+<!-- <text>pages/success/index.wxml</text> -->
+<view class='main-layout'>
+  <view class='main-zoom'>
+    <view class='top'>
+      <view class='icon'><icon type="success" color='rgb(7,175,18)' size="60"/></view>
+      <view>已通知商户</view>
+      <view>请与商家确认及索取发票</view>
+    </view>
+    <navigator url='/pages/flashIndex/index' hover-class='none' open-type='reLaunch'>
+      <button class='handup-button'>回到首页</button>
+    </navigator>
+  </view>
+  <copyRight></copyRight>
+</view>

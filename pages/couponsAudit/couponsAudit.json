@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "优惠券审核",
+  "usingComponents": {
+    "coupons-card-check": "../../components/couponsCardCheck/couponsCardCheck",
+    "loginModal": "../../components/loginModal/loginModal"
+  }
+}

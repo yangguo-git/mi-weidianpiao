@@ -1,0 +1,43 @@
+<!--pages/merchant_home/merchant_home.wxml-->
+<block wx:if='{{!showLoginModal}}'>
+  <view class="t_c">
+    <image class="logo" mode='widthFix' src="{{logUrl}}"></image>
+    <view class="title">{{shopName}}</view>
+  </view>
+  <view class="card">
+    <view class="centent">
+      <button class="t_c" hover-class="none" catchtap="nav_payPoint">
+        <image class="icon" mode='widthFix' src="/images/pay.png"></image>
+        <view class="card_item_txt">付款</view>
+      </button>
+      <button class="t_c" hover-class="none" catchtap="nav_myCoupons">
+        <image class="icon" mode='widthFix' src="/images/coupons.png"></image>
+        <view class="card_item_txt">优惠券</view>
+      </button>
+      <button class="t_c" hover-class="none" catchtap="nav_openPage">
+        <image class="icon" mode='widthFix' src="/images/bill.png"></image>
+        <view class="card_item_txt">开发票</view>
+      </button>
+      <button class="t_c" hover-class="none" catchtap="nav_wifi">
+        <image class="icon" mode='widthFix' src="/images/wifi.png"></image>
+        <view class="card_item_txt">Wi-Fi</view>
+      </button>
+    </view>
+  </view>
+  <view class="card" wx:if='{{shopAddress}}'>
+    <view class="centent2">
+      <image class="icon" mode='widthFix' src="/images/poi.png"></image>
+      <text class="card_item_txt">{{shopAddress}}</text>
+    </view>
+  </view>
+  <view class="card" wx:if='{{phoneNumber}}'>
+    <view class="centent2">
+      <image class="icon" mode='widthFix' src="/images/phone.png"></image>
+      <text class="card_item_txt">联系方式：{{phoneNumber}}</text>
+      <image class="phone" mode='widthFix' catchtap="shopNumber" src="/images/phone.png"></image>
+
+    </view>
+  </view>
+  <my_swiper style='position: relative; top: 300rpx;' wx:if='{{my_swiper_show}}'/>
+</block>
+  <loginModal bind:onRefuse="refuseLogin" bind:onGetUserInfo="acceptLogin" wx:if="{{showLoginModal}}"></loginModal>

@@ -1,0 +1,86 @@
+/* pages/openning/index.wxss */
+page{
+  background: #efeff3;
+  padding-bottom: 30rpx;
+}
+.images{
+
+  /* width: 168rpx; */
+   width: 78rpx;
+  margin: 0 auto;
+  margin-top: 90rpx;
+  margin-bottom: 15rpx;
+}
+.ing{
+  text-align: center;
+  margin-bottom: 40rpx;
+  font-size: 32rpx;
+}
+.content{
+  /* padding: 60rpx 36rpx 45rpx 50rpx; */
+  font-size: 30rpx;
+  margin-left: 25rpx;
+  background: #fff;
+  width: 700rpx;
+  border-radius: 16rpx;
+}
+icon{
+  margin-right: 16rpx;
+}
+.tips{
+   margin-bottom: 50rpx;
+   text-align: center;
+   font-size: 32rpx;
+}
+.name{
+  text-align: center;
+  /* font-size: 36rpx;
+  color: #000000;
+  margin-bottom: 48rpx;
+  text-indent: -50rpx; */
+  font-size: 32rpx;
+  color: #6c3c2a;
+  width: 300rpx;
+  margin: 0 auto;
+  padding-bottom: 70rpx;
+  padding-top: 50rpx;
+}
+.item{
+  padding-bottom: 26rpx;
+  align-items: flex-start;
+  padding-left: 54rpx;
+  padding-right: 54rpx;
+  justify-content: space-between;
+}
+.title{
+  font-size: 28rpx;
+  color: #aeaeae;
+  width: 166rpx;
+}
+.right{
+  width: 480rpx;
+}
+.money{
+  font-size: 40rpx;
+  color: #ff2828;
+  align-items: baseline;
+}
+.unit{
+  font-size: 30rpx;
+}
+.pro{
+  margin-bottom: 6rpx;
+}
+.icon-font{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 40rpx;
+  color: #ccc;
+}
+.font-zoom{
+  width: 100%;
+  text-align: center;
+  /* border-bottom: 1px solid #d8d8d8; */
+  padding: 14rpx 0;
+}

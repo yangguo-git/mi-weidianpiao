@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "开票成功",
+  "usingComponents": {
+    "copyRight": "../../components/copyRight/index"
+  }
+}

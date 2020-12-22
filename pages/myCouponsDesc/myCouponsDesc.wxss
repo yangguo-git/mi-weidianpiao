@@ -1,0 +1,115 @@
+.card-content{
+  width: 690rpx;
+  margin: 71rpx auto 41rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0rpx 3rpx 8rpx 0rpx rgba(13, 13, 13, 0.07);
+}
+.card-content-top {
+  width:100%;
+  height: 182rpx;
+  border-bottom:4rpx dashed rgba(13, 13, 13, 0.07);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 36rpx;
+  letter-spacing: 0rpx;
+  position:relative;
+  overflow:hidden;
+}
+.card-text {
+  padding: 35rpx 0rpx 28rpx 36rpx;
+}
+.card-stroe {
+  font-size: 30rpx;
+}
+.card-type {
+  margin: 16rpx 0rpx 20rpx;
+}
+.card-type text {
+  padding: 3rpx 11rpx;
+  font-size: 24rpx;
+  color: #09bb07;
+  border-radius: 4rpx;
+  border: solid 1rpx #09bb07;
+}
+.card-between-time {
+  font-size: 20rpx;
+  color: #aeaeae;
+}
+.card-use {
+  color: #0ba409;
+  line-height: 34rpx;
+  /* width:180rpx; */
+  text-align:center;
+  padding-right:31rpx;
+}
+/* .card-use text:nth-child(1) {
+  font-size: 100rpx;
+} */
+.card-use .noCardUseSub{
+  font-size: 74rpx;
+}
+.card-use .hasCardUseSub{
+  font-size: 100rpx;
+}
+.card-use text:nth-child(2) {
+  padding-left:10rpx;
+  font-size: 28rpx;
+}
+.card-bg-text{
+  text-align: center;
+  font-size: 92rpx;
+  color: #0ba409;
+	opacity: 0.13;
+  border-radius:50%;
+  position:absolute;
+  right:-35rpx;
+  width: 148rpx;
+	height: 148rspx;
+  line-height:148rpx;
+  border: 5rpx solid #0ba409;
+}
+.card-content-bottom view{
+  height:112rpx;
+  text-align:center;
+  font-size: 34rpx;
+	line-height: 112rpx;
+	letter-spacing: 0rpx;
+}
+.card-btn button{
+	width: 690rpx;
+	height: 94rpx;
+	background-color: #0ba409;
+	border-radius: 10px;
+  font-size: 30rpx;
+	line-height: 94rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  margin-bottom:66rpx;
+}
+.card-desc{
+  width:690rpx;
+  margin:0 auto;
+}
+.card-desc>view{
+  margin-bottom:90rpx;
+}
+.card-desc-time view:nth-child(1),.card-desc-use view:nth-child(1),.card-desc-notice view:nth-child(1){
+  font-size: 30rpx;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #010101;
+}
+.card-desc-text{
+  font-size: 26rpx;
+	line-height: 36rpx;
+	letter-spacing: 0rpx;
+	color: #575757;
+  margin-top:30rpx;
+  display:flex;
+  align-items: center;
+}

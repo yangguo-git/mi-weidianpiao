@@ -1,0 +1,53 @@
+/* components/menu/index.wxss */
+.menu-title{
+  font-size: 28rpx;
+  color: #999999;
+  padding: 28rpx 0rpx 18rpx 44rpx;
+}
+.menu-layout{
+  padding: 35rpx 124rpx;
+  font-size: 32rpx;
+  background-color: #ffffff;
+	border-radius: 17rpx;
+  margin: 0 14rpx;
+  justify-content:space-between;
+}
+.sigle{
+  padding: 35rpx 30rpx;
+}
+.align{
+  align-items: center;
+}
+.menu-item{
+  /* margin-right: 85rpx; */
+}
+.menu-item .icon-weigouxuan{
+  color: #07af12;
+}
+.menu-item text{
+  margin-right: 14rpx;
+  font-size: 38rpx;
+}
+.menu-item .icon-gouxuan-xuanzhong-yuankuang{
+  color: #07af12;
+}
+.menu-item .icon-circle{
+  color: #07af12;
+}
+
+.diaabled .icon-weigouxuan{
+  color: #b5b5b5;
+  /* background-color: #eeeeee; */
+  border-radius: 50%;
+	/* border: solid 1px #b5b5b5; */
+}
+.diaabled view{
+  margin-right: 14rpx;
+  color: #989898;
+}
+.diaabled .icon-gouxuan-xuanzhong-yuankuang{
+  color: #b5b5b5;
+}
+.icon-piaojuleixingtubiao{
+  color: #07af12;
+}

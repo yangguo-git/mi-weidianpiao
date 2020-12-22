@@ -1,0 +1,11 @@
+/* pages/sendEmail/index.wxss */
+.content{
+  padding: 74rpx 32rpx 32rpx 32rpx;
+}
+input{
+  padding: 24rpx 52rpx 24rpx 52rpx;
+  border: 1px solid #eee;
+  margin-top: 80rpx;
+  margin-bottom: 72rpx;
+  font-size: 30rpx;
+}

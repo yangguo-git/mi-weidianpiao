@@ -1,0 +1,54 @@
+.search{
+  width:690rpx;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin:57rpx auto 55rpx;
+}
+.search-box input{
+  line-height: 70rpx;
+  font-size:28rpx;
+	width: 545rpx;
+	height: 70rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  margin-right:6rpx;
+  box-shadow: 0rpx 3rpx 8rpx 0rpx 
+		rgba(13, 13, 13, 0.07);
+    padding:0rpx 20rpx;
+    box-sizing: border-box;
+}
+.search-btn button{
+	width: 138rpx;
+	height: 70rpx;
+	background-color: #0ba409;
+	border-radius: 10rpx;
+  font-size: 28rpx;
+	line-height: 70rpx;
+	letter-spacing: 2rpx;
+	color: #ffffff;
+}
+.card-expired{
+  margin-bottom:120rpx;
+}
+.coupons-bottom{
+  position:fixed;
+  width:100%;
+  height:104rpx;
+  background-color:white;
+  bottom:0;
+  left:0;
+}
+.other-coupons{
+  width:100%;
+  display:flex;
+  justify-content:space-evenly;
+  align-items: center;
+  text-decoration: underline;
+	font-size: 26rpx;
+	line-height: 29rpx;
+	letter-spacing: 0rpx;
+	color: #6f6f6f;
+  margin-top:37rpx;
+}

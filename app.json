@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/flashIndex/index",
+    "pages/openPage/openPage",
+    "pages/merchant_home/merchant_home",
+    "pages/merchant_home/wifi/wifi",
+    "pages/merchant_home/payPoint/payPoint",
+    "pages/expiredCoupons/expiredCoupons",
+    "pages/hasUseCoupons/hasUseCoupons",
+    "pages/myCoupons/myCoupons",
+    "pages/myCouponsDesc/myCouponsDesc",
+    "pages/couponsAudit/couponsAudit",
+    "pages/couponsAuditDesc/couponsAuditDesc",
+    "pages/bindAuditor/bindAuditor",
+    "pages/unBindSuccess/unBindSuccess",
+    "pages/processed/index",
+    "pages/bindSuccess/bindSuccess",
+    "pages/index/index",
+    "pages/information/index",
+    "pages/detail/index",
+    "pages/success/index",
+    "pages/flowerInformation/index",
+    "pages/myInvoice/index",
+    "pages/invoiceDetail/index",
+    "pages/paperInvoiceDetail/index",
+    "pages/eInvoiceDetail/index",
+    "pages/sendEmail/index",
+    "pages/openning/index",
+    "pages/test/test",
+    "pages/matchOpenDetail/index",
+    "pages/contactPage/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333333",
+    "navigationBarTitleText": "发票抬头",
+    "navigationBarTextStyle": "white"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx9db2c16d0633c2e7",
+    "wx1a74e3dfe30a3067",
+    "wxfca9bb1f108404dd",
+    "wx1129fc27588b7898"
+  ],
+  "plugins": {
+    "contactPlugin": {
+      "version": "1.0.12",
+      "provider": "wx104a1a20c3f81ec2"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

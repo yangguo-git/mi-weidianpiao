@@ -1,0 +1,91 @@
+/* pages/merchant_home/wifi/wifi.wxss */
+.t_c {
+  text-align: center;
+}
+
+.logo {
+  width: 220rpx;
+  max-height: 220rpx;
+}
+.title{
+  margin-top: -30rpx;
+  margin-bottom: 40rpx;
+}
+button{
+  color: #333
+}
+.height_200{
+  height: 120rpx;
+  width: 100%;
+}
+page {
+  background: #efeef3;
+  font-size: 32rpx;
+}
+.link_wifi_block{
+  margin-top: 110rpx;
+}
+.card {
+  background: white;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 40rpx;
+  padding-bottom: 50rpx;
+}
+
+.centent {
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  display: flex;
+  border-bottom: 1px solid #d0d0d0;
+  flex-direction: row;
+  padding-bottom: 20rpx;
+  margin-right: 0rpx;
+}
+.centent text{
+  color: #999;
+  width: 190rpx;
+  font-size: 30rpx;
+  margin-top: 6rpx;
+}
+.centent button{
+  font-size: 26rpx;
+  position: absolute;
+  background: #00B100;
+  color: white;
+  border-radius: 50rpx;
+  width: 140rpx;
+  right: 50rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.input{
+  text-align: left;
+}
+.tifi_title{
+  margin: 40rpx;
+  /* font-weight: 600; */
+  text-align: left;
+  padding-top: 40rpx;
+  font-size: 38rpx;
+}
+.card_item_txt {
+  color: #333;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.centent .t_c {
+  width: 25%;
+}
+.wifi3{
+  width:120rpx;
+  margin-top: 30rpx;
+}
+.return_btn{
+  /* border-radius: 50rpx; */
+  margin-top: 50rpx;
+  width: 70%;
+  border: 1px solid #efeef3;
+}

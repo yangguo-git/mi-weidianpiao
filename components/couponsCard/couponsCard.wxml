@@ -1,0 +1,49 @@
+<view>
+  <view class="card-content">
+    <view class="card-text">
+      <view class="card-store">{{ name }}
+      </view>
+       <view class="card-company">{{companyName}}
+      </view>
+      <view class="card-type">
+        <text wx:if="{{type==='DISCOUNT'}}">折扣券</text>
+        <text wx:if="{{type==='DONATE'}}">赠送券</text>
+        <text wx:if="{{type==='CASH'}}">现金券</text>
+      </view>
+      <view class="card-between-time">
+       <text wx:if="{{ status === '1' || status === '3'}}">{{vailyTime}}</text>
+        <text wx:if="{{ status === '2' }}">使用时间： {{useTime}}</text>
+      </view>
+    </view>
+    <view class="card-use" wx:if="{{type==='DISCOUNT'}}">
+      <text class="hasCardUseSub">{{ value }}</text>
+      <text>折</text>
+    </view>
+    <view class="card-use" wx:if="{{type==='CASH'}}">
+      <text class="hasCardUseSub">{{ value }}</text>
+      <text>元</text>
+    </view>
+    <view class="card-use" wx:if="{{type==='DONATE'}}">
+      <text class="noCardUseSub">{{ value }}</text>
+    </view>
+    <!-- <view class="card-bg-text">
+      <text>券</text>
+    </view> -->
+    <view class="card-right-top-mark" wx:if="{{ status === '2' ||status === '3'}}">
+      <block wx:if="{{ status === '2' }}">
+        <text>已使用</text>
+      </block>
+      <block wx:if="{{ status === '3' }}">
+        <text>过期</text>
+      </block>
+    </view>
+    <view class="card-bg-color">
+      <block wx:if="{{ status === '2' ||status === '3'}}">
+        <image src="../../icons/card_dark.png" style="width: 242rpx;height: 196rpx;" />
+      </block>
+      <block wx:else>
+        <image src="../../icons/card_green.png" style="width: 242rpx;height: 196rpx;" />
+      </block>
+    </view>
+  </view>
+</view>

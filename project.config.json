@@ -1,0 +1,247 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.1",
+  "appid": "wx0900bf7f2731b876",
+  "projectname": "%E8%81%94%E9%80%9A%E6%9E%81%E9%80%9F%E5%8F%91%E7%A5%A8%E6%9C%8D%E5%8A%A1",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "填写信息",
+          "pathName": "pages/detail/index",
+          "query": "appId=1",
+          "scene": "1037",
+          "referrerInfo": {
+            "extraData": "{ \"mchId\": \"test001\", \"sign\": \"FDBB85E53BF0082BA0602B0B1C4AFA60\", \"encryptData\": \"Gmw/MFMQpjkisDnAXSnUqDJ/Bkn9LoKn9OKnP39GXSowmK4GC9hBZzgV9Dwo9fofnUL6hfvRdC3bBAqqfGCLHYUb1+nHfAQt5sRpo+Dq2x9gOL0HuqmKE6mxv51ydGLFkWj0ql3Jum52oQwhkUleAyGCS6jytztU6IUNHfw4s1ECJmZgKyjjRfsvQ8iq1rS/AeTbbESJdVWA71os0ZRlwYGNHsOKOWAFMTyY3tfq6OvkvY0h UCg0RShsEu3amxhgM5oq6u4Yz+Sc6/6m0MxLQXl26+PxAS7quj542iACnp2mN/LTWtVEtunaVBg41h64gKVgzjSA2COUDa3q5SgYPz+MVDERJITBRpBoKRe7tIna+6d+aPVzqprY8Kk9nUelD1sTisUaz8ztR81A3063FaLYb9zd/2rDxSjrYLuRg6HqWd9kjRfd+aLGBi8x2rHsVyngeIbPOj2UHmJSxUmID5Wdv2YUVgP60cSEm0XlsDRrlDFbGuztihuFN/f8w3RmNJ5tJAf7SkEW/ArTCBjqsnW/R0nfrtaXGS1/HFLRjx79OOaA5cSsv/U+xPmatScBwOiJHtRRTH7V6V3bHTx9mcD2WgsTh/BbwgYgDI2f5i1ARJ0N0A1UUEIqsv0sfNqWdwP4VFFyYbrlDX9VhL+wiiJNbBUg4FsGXJqql4hLyAr0swgaoK3l9vkI4kGNU7vtytS6PaXuMQsvEMOtnemDsenmqwA4smU711wkvCMyKFBqs/O5nZnMjaca10lrDNZ5rWI6k99M13MM0khRlSly/IY9wf8T7JKgR6YrQJ5AAzGY1Js7m+iRwnCJeQSFWrP8/zHdcSqwDIM6VvP4vU1ZQ/XyHJeNb6r6c1Qy0lyC0vE=\" }"
+          }
+        },
+        {
+          "id": -1,
+          "name": "信息详情",
+          "pathName": "pages/information/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "成功页",
+          "pathName": "pages/success/index",
+          "query": ""
+        },
+        {
+          "id": 3,
+          "name": "首页",
+          "pathName": "pages/flashIndex/index",
+          "query": "m_appId=wp18121003",
+          "scene": 1037,
+          "referrerInfo": {
+            "extraData": "{ \"mchId\": \"test001\", \"sign\": \"FDBB85E53BF0082BA0602B0B1C4AFA60\", \"encryptData\": \"Gmw/MFMQpjkisDnAXSnUqDJ/Bkn9LoKn9OKnP39GXSowmK4GC9hBZzgV9Dwo9fofnUL6hfvRdC3bBAqqfGCLHYUb1+nHfAQt5sRpo+Dq2x9gOL0HuqmKE6mxv51ydGLFkWj0ql3Jum52oQwhkUleAyGCS6jytztU6IUNHfw4s1ECJmZgKyjjRfsvQ8iq1rS/AeTbbESJdVWA71os0ZRlwYGNHsOKOWAFMTyY3tfq6OvkvY0h UCg0RShsEu3amxhgM5oq6u4Yz+Sc6/6m0MxLQXl26+PxAS7quj542iACnp2mN/LTWtVEtunaVBg41h64gKVgzjSA2COUDa3q5SgYPz+MVDERJITBRpBoKRe7tIna+6d+aPVzqprY8Kk9nUelD1sTisUaz8ztR81A3063FaLYb9zd/2rDxSjrYLuRg6HqWd9kjRfd+aLGBi8x2rHsVyngeIbPOj2UHmJSxUmID5Wdv2YUVgP60cSEm0XlsDRrlDFbGuztihuFN/f8w3RmNJ5tJAf7SkEW/ArTCBjqsnW/R0nfrtaXGS1/HFLRjx79OOaA5cSsv/U+xPmatScBwOiJHtRRTH7V6V3bHTx9mcD2WgsTh/BbwgYgDI2f5i1ARJ0N0A1UUEIqsv0sfNqWdwP4VFFyYbrlDX9VhL+wiiJNbBUg4FsGXJqql4hLyAr0swgaoK3l9vkI4kGNU7vtytS6PaXuMQsvEMOtnemDsenmqwA4smU711wkvCMyKFBqs/O5nZnMjaca10lrDNZ5rWI6k99M13MM0khRlSly/IY9wf8T7JKgR6YrQJ5AAzGY1Js7m+iRwnCJeQSFWrP8/zHdcSqwDIM6VvP4vU1ZQ/XyHJeNb6r6c1Qy0lyC0vE=\" }"
+          }
+        },
+        {
+          "id": 4,
+          "name": "首页花店",
+          "pathName": "pages/index/index",
+          "query": "appId=TYDC0314185353100131",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的发票",
+          "pathName": "pages/myInvoice/index",
+          "query": ""
+        },
+        {
+          "id": 6,
+          "name": "纸质发票详情",
+          "pathName": "pages/paperInvoiceDetail/index",
+          "query": ""
+        },
+        {
+          "id": 7,
+          "name": "花店详情",
+          "pathName": "pages/flowerInformation/index",
+          "query": "appId=TYDC0314185353100131",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "卡包打开电子发票",
+          "pathName": "pages/invoiceDetail/index",
+          "query": ""
+        },
+        {
+          "id": 9,
+          "name": "电子发票详情",
+          "pathName": "pages/eInvoiceDetail/index",
+          "query": "id=338e1647967b446ea6de45dda97a39e1",
+          "scene": 1037,
+          "referrerInfo": {
+            "extraData": "{ \"mchId\": \"test001\", \"sign\": \"FDBB85E53BF0082BA0602B0B1C4AFA60\", \"encryptData\": \"Gmw/MFMQpjkisDnAXSnUqDJ/Bkn9LoKn9OKnP39GXSowmK4GC9hBZzgV9Dwo9fofnUL6hfvRdC3bBAqqfGCLHYUb1+nHfAQt5sRpo+Dq2x9gOL0HuqmKE6mxv51ydGLFkWj0ql3Jum52oQwhkUleAyGCS6jytztU6IUNHfw4s1ECJmZgKyjjRfsvQ8iq1rS/AeTbbESJdVWA71os0ZRlwYGNHsOKOWAFMTyY3tfq6OvkvY0h UCg0RShsEu3amxhgM5oq6u4Yz+Sc6/6m0MxLQXl26+PxAS7quj542iACnp2mN/LTWtVEtunaVBg41h64gKVgzjSA2COUDa3q5SgYPz+MVDERJITBRpBoKRe7tIna+6d+aPVzqprY8Kk9nUelD1sTisUaz8ztR81A3063FaLYb9zd/2rDxSjrYLuRg6HqWd9kjRfd+aLGBi8x2rHsVyngeIbPOj2UHmJSxUmID5Wdv2YUVgP60cSEm0XlsDRrlDFbGuztihuFN/f8w3RmNJ5tJAf7SkEW/ArTCBjqsnW/R0nfrtaXGS1/HFLRjx79OOaA5cSsv/U+xPmatScBwOiJHtRRTH7V6V3bHTx9mcD2WgsTh/BbwgYgDI2f5i1ARJ0N0A1UUEIqsv0sfNqWdwP4VFFyYbrlDX9VhL+wiiJNbBUg4FsGXJqql4hLyAr0swgaoK3l9vkI4kGNU7vtytS6PaXuMQsvEMOtnemDsenmqwA4smU711wkvCMyKFBqs/O5nZnMjaca10lrDNZ5rWI6k99M13MM0khRlSly/IY9wf8T7JKgR6YrQJ5AAzGY1Js7m+iRwnCJeQSFWrP8/zHdcSqwDIM6VvP4vU1ZQ/XyHJeNb6r6c1Qy0lyC0vE=\" }"
+          }
+        },
+        {
+          "id": -1,
+          "name": "电子发票发邮箱",
+          "pathName": "pages/sendEmail/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "开票中",
+          "pathName": "pages/openning/index",
+          "query": ""
+        },
+        {
+          "id": 12,
+          "name": "湖北开票详情",
+          "pathName": "pages/matchOpenDetail/index",
+          "query": "mchId=1&sign=6FEB6ABD85422BF31F93CB46178EA14C&encryptData=Gmw/MFMQpjkisDnAXSnUqEUV0LWrvgje2WEUeAD3gS4AAC3caPkIIkiaPRJ85gzoEMdz11JzctNgaJZ2GzBaadNVE4Zv02dbvCdnNy9RwTbaFLpnaFkEVrddqJLIMpBizv9oroGGho9N/a/80GB61U1ANhcIa+ilTGseQn9gAZQEDGlOGTv39P0/Gzz5kfRkznHviM81AFlKvY7/dq9RPAyhE395JwQOYq5VeRnGP5UMfL7tDJvxKMQbX15Jkxu1tuF5b4iCdiVQxdtSFAzrpRcsKsFwQgJKMov7RzRydylf8WhviZ+ufIsUuyAIL33BP65D+S/O4ZR26I4lToFiUrfkazxfgkIrSfWPd6oQSfKlWpyGdYphX5frEx3A+I89vc+rg52UWodFy3E2YjPdvsssMKiRHg2rbKYcrLNefSaBSilMS/SEsbqVKbPAwyE+uZE7ZQJWFuYTa7VFqZMS9ZvttAJUkQTNDBmHYP98hoDw4JocyYf0rZBQtOadnYsHuHRL83bB97v35h7+57aWG+rh8/JecUpUA3N2Z77IWeLDA23Z5tvrqsZxiWkA9taaNoOqEx8lbrilbnb2gbxwQva3UrTHlDSaBMcshBD9Hbk=",
+          "scene": "1037",
+          "referrerInfo": {
+            "extraData": "{ \"mchId\": \"test001\", \"sign\": \"FDBB85E53BF0082BA0602B0B1C4AFA60\", \"encryptData\": \"Gmw/MFMQpjkisDnAXSnUqDJ/Bkn9LoKn9OKnP39GXSowmK4GC9hBZzgV9Dwo9fofnUL6hfvRdC3bBAqqfGCLHYUb1+nHfAQt5sRpo+Dq2x9gOL0HuqmKE6mxv51ydGLFkWj0ql3Jum52oQwhkUleAyGCS6jytztU6IUNHfw4s1ECJmZgKyjjRfsvQ8iq1rS/AeTbbESJdVWA71os0ZRlwYGNHsOKOWAFMTyY3tfq6OvkvY0h UCg0RShsEu3amxhgM5oq6u4Yz+Sc6/6m0MxLQXl26+PxAS7quj542iACnp2mN/LTWtVEtunaVBg41h64gKVgzjSA2COUDa3q5SgYPz+MVDERJITBRpBoKRe7tIna+6d+aPVzqprY8Kk9nUelD1sTisUaz8ztR81A3063FaLYb9zd/2rDxSjrYLuRg6HqWd9kjRfd+aLGBi8x2rHsVyngeIbPOj2UHmJSxUmID5Wdv2YUVgP60cSEm0XlsDRrlDFbGuztihuFN/f8w3RmNJ5tJAf7SkEW/ArTCBjqsnW/R0nfrtaXGS1/HFLRjx79OOaA5cSsv/U+xPmatScBwOiJHtRRTH7V6V3bHTx9mcD2WgsTh/BbwgYgDI2f5i1ARJ0N0A1UUEIqsv0sfNqWdwP4VFFyYbrlDX9VhL+wiiJNbBUg4FsGXJqql4hLyAr0swgaoK3l9vkI4kGNU7vtytS6PaXuMQsvEMOtnemDsenmqwA4smU711wkvCMyKFBqs/O5nZnMjaca10lrDNZ5rWI6k99M13MM0khRlSly/IY9wf8T7JKgR6YrQJ5AAzGY1Js7m+iRwnCJeQSFWrP8/zHdcSqwDIM6VvP4vU1ZQ/XyHJeNb6r6c1Qy0lyC0vE=\" }"
+          }
+        },
+        {
+          "id": 13,
+          "name": "首页appid",
+          "pathName": "pages/flashIndex/index",
+          "query": "m_appId=1",
+          "scene": null
+        },
+        {
+          "id": 14,
+          "name": "联系客服",
+          "pathName": "pages/contactPage/index",
+          "query": "q=http%3A%2F%2Fwww.baidu.com%3Fi%3Dme5wCeHGg50%26b%3D2%26c%3D3",
+          "scene": null
+        },
+        {
+          "id": 15,
+          "name": "pages/merchant_home/merchant_home",
+          "pathName": "pages/merchant_home/merchant_home",
+          "query": "m_appId=WP19021001",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/detail/index",
+          "pathName": "pages/detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/bindAuditor/bindAuditor",
+          "pathName": "pages/bindAuditor/bindAuditor",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/merchant_home/wifi/wifi",
+          "pathName": "pages/merchant_home/wifi/wifi",
+          "query": "m_appId=WP19021001",
+          "scene": null
+        },
+        {
+          "id": 19,
+          "name": "pages/openPage/openPage",
+          "pathName": "pages/openPage/openPage",
+          "query": "m_appId=WP19028272",
+          "scene": null
+        },
+        {
+          "id": 20,
+          "name": "pages/merchant_home/merchant_home",
+          "pathName": "pages/merchant_home/merchant_home",
+          "query": "q=%253Fmch_id%253D1504536411%2526i%253Dbp3vwS8G1Jk",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/merchant_home/wifi/wifi",
+          "pathName": "pages/merchant_home/wifi/wifi",
+          "query": "m_appId=WP19028272",
+          "scene": null
+        },
+        {
+          "id": 22,
+          "name": "pages/openPage/openPage",
+          "pathName": "pages/openPage/openPage",
+          "query": "m_appId=WP19028273",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "开票",
+          "pathName": "pages/openPage/openPage",
+          "query": "m_appId=WP19024012",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/processed/index",
+          "pathName": "pages/processed/index",
+          "query": "enterType=1&orderId=7f21fcd590374217a44cad6e7e51ec37&appId=WP19028273&jumpData=%7B%22activityId%22%3A%22partnerprogram01%22%2C%22fastType%22%3A1%2C%22minipAppid%22%3A%22wxa64d8ad33773c1ab%22%2C%22openid%22%3A%22ohba45Rb9h6eDta6FsXf_l6994ZQ%22%2C%22reqNo%22%3A%227f21fcd590374217a44cad6e7e51ec37%22%2C%22uuid%22%3A%227f21fcd590374217a44cad6e7e51ec37%22%7D",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

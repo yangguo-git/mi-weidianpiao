@@ -1,0 +1,54 @@
+<view>
+  <view class="card-expired">
+    <view class="card-expired-btn">
+      <view>
+        <text>如需更换优惠券审核人，请在此解除绑定，并用更换的审核人再次微信扫码绑定</text>
+      </view>
+      <view>
+        <button bindtap="removeBind">解除绑定</button>
+      </view>
+    </view>
+    <view class="card-expired-card">
+      <view wx:for="{{coupons}}" wx:key="index" wx:for-index="index" data-index="{{index}}" wx:for-item="item">
+        <coupons-card-check cardCheck="{{item.cardCheck}}" id="{{item.id}}" title="{{item.title}}" type="{{item.cardType}}" vailyTime="{{item.vailyTime}}" value="{{item.cardValue}}" status="{{item.status}}" addStock="{{item.addStock}}" reviewRecoedId="{{item.reviewRecoedId}}"
+          bind:onCheckCard='onCheckCardSend' bindtap="goToDesc"></coupons-card-check>
+      </view>
+    </view>
+    <view class="card-expired-bottom">
+      <view class="card-expired-bleft">
+        <block wx:if="{{allCheck}}">
+          <view bindtap='allCheck' style="width:38rpx;height:38rpx;border-radius:50%;box-sizing:border-box">
+            <icon type="success" size="22"></icon>
+          </view>
+        </block>
+        <block wx:if="{{!allCheck}}">
+          <view style="width:38rpx;height:38rpx;border-radius:50%;border:1rpx solid #bfbfbf;" bindtap='allCheck'></view>
+        </block>
+        <view style="{{disabled?'color:#707070':''}}">全选</view>
+      </view>
+      <view class="card-expired-bright">
+        <view class="card-expired-num" wx:if="{{coupons.length>3}}">审核数量超过3个</view>
+        <view>
+          <button bindtap="releaseCard" disabled="{{disabled}}">发布</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <loginModal isAudit="true" bind:onGetUserInfo="getUserInfo" wx:if="{{!hasUserInfo}}"></loginModal>
+  <!-- <view class="get-user-info" wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="get-user-info-modal">
+      <view class="get-user-info-top">
+        <image src="../../icons/get_info.png" style="width:153rpx;height:153rpx;border-radius:50%;border:6rpx solid #96c697" mode="aspectFill"></image>
+        <text>提示</text>
+        <text>点击下方按钮可授权</text>
+      </view>
+      <view class="get-user-info-bottom">
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
+        <button bindtap="closeModal">取消</button>
+      </view>
+    </view>
+  </view> -->
+  <view style="width:100%;height:100%;position:fixed;z-index:99;top:0;background-color:white" wx:if="{{!isAudit}}" class="coverModal">
+    <image src="../../icons/couponsAudit_loading.png" style="width:80rpx;height:80rpx;"></image>
+  </view>
+</view>

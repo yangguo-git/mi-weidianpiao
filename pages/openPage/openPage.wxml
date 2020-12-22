@@ -1,0 +1,53 @@
+<!--pages/openPage/openPage.wxml-->
+    <view style='width：100%;height:24rpx;'></view>
+    <image wx:if="{{appId && logUrl}}" class='img-logo' src='{{logUrl}}' mode='widthFix'></image>
+    <view class='invoice-shopname' wx:if="{{appId}}">{{shopName}}</view>
+    <menu wx:if="{{appId}}" type="{{canOpenType}}" bindclick="selectTypeEvent" selectTypeIndex="{{selectTypeIndex}}"></menu>
+    <view class='invoice-tittle'>发票抬头信息</view>
+    <view class="container">
+      <navigator url="{{appId ? '/pages/detail/index?appId=' + appId+'&ly_openPage=true' : '/pages/detail/index?ly_openPage=true'}}" open-type='navigate' hover-class='none'>
+        <view class='add flex item'>
+          <view><text class='iconfont icon-jiahao'></text></view>
+          <view>添加发票抬头</view>
+        </view>
+      </navigator>
+      <view>
+        <invoiceitem bindselectEvent="selectEvent" index="{{index}}" wx:key="{{index}}" wx:for="{{invoiceList}}" selectStatus="{{selectIndex == index}}"  select="{{appId}}" invoiceItem="{{item}}" appId="{{appId}}"></invoiceitem>
+      </view>
+    </view>
+    <form report-submit='true' bindsubmit='addInvoice' wx:if="{{isCanSubmit}}">
+      <button wx:if='{{invoiceList.length != 0 && appId}}' form-type='submit' class='handup-button'>提交</button>
+      <button  wx:if='{{invoiceList.length == 0 && appId}}' form-type='submit' class='handup-button handup-button2'>提交</button>
+    </form>
+    <!-- <navigator open-type='reLaunch' url='/pages/flashIndex/index' wx:if="{{appId}}">
+      <view> 
+        <image class='an' mode='widthFix' src='/images/an.png'></image>
+      </view>
+    </navigator> -->
+    
+  <view class='invoice-title-main' catchtouchmove='return false' wx:if="{{invoiceCover}}">
+    <view class='invoice-title-cover'>
+      <view class='invoice-title-top'>
+        <view class='top-title'>抬头信息</view>
+        <view class='title-name'>名称：{{invoiceList[selectIndex].name}}</view>
+        <view class='title-name border-top'>税号：{{invoiceList[selectIndex].taxId}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].address}}">单位地址：{{invoiceList[selectIndex].address}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].telephone}}">电话号码：{{invoiceList[selectIndex].telephone}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].bank}}">开户银行：{{invoiceList[selectIndex].bank}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].account}}">银行账户：{{invoiceList[selectIndex].account}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].email}}">邮箱：{{invoiceList[selectIndex].email}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].mobilePhone}}">手机：{{invoiceList[selectIndex].mobilePhone}}</view>
+      </view>
+      <view class='invoice-title-top' wx:if='{{activeIndex == 1}}'>
+        <view class='top-title' >抬头信息</view>
+        <view class='title-name' wx:if="{{invoiceList[selectIndex].name}}">姓名：{{invoiceList[selectIndex].name}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].mobilePhone}}">手机：{{invoiceList[selectIndex].mobilePhone}}</view>
+        <view class='title-name border-top' wx:if="{{invoiceList[selectIndex].email}}">邮箱：{{invoiceList[selectIndex].email}}</view>
+      </view>
+      <view class='invoice-title-oprate flex between'>
+        <view class='cover-edit' bindtap='navDetail'>重新编辑</view>
+        <view class='cover-comfirm' bindtap='invoiceCoverSubmit'>确定提交</view>
+      </view>
+    </view>
+  </view>
+  <my_swiper wx:if='{{my_swiper_show}}'/>
